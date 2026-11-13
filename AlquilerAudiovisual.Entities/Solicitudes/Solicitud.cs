@@ -14,11 +14,11 @@ namespace AlquilerAudiovisual.Entities.Solicitudes
         public required TimeOnly HoraInicio { get; set; }
         public required TimeOnly HoraFin { get; set; }
         public required int CantidadAsistentes { get; set; }
+        public EstadoSolicitud Estado { get; set; } = EstadoSolicitud.Pendiente;
+        public List<CambioEstadoSolicitud> Historial { get; set; } = new();
         public required Cliente Cliente { get; set; }
         public required TipoEvento TipoEvento { get; set; }
         public required List<DetalleSolicitud> Detalles { get; set; } = new();
-        public List<CambioEstadoSolicitud> Historial { get; set; } = new();
-        public EstadoSolicitud Estado { get; set; } = EstadoSolicitud.Pendiente;
         public required Contratacion Contratacion { get; set; }
         public void CambiarEstado(EstadoSolicitud nuevo, string obs)
         {

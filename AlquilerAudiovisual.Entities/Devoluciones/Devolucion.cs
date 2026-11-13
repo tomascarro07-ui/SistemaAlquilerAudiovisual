@@ -4,7 +4,8 @@ using System.Text;
 
 namespace AlquilerAudiovisual.Entities.Devoluciones
 {
-    internal class Devolucion
+    public class Devolucion
     {
+
     }
 }

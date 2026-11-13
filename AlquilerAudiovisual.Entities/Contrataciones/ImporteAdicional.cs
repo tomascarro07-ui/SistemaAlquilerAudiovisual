@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AlquilerAudiovisual.Entities.Contrataciones
+﻿namespace AlquilerAudiovisual.Entities.Contrataciones
 {
-    internal class ImporteAdicional
+    public class ImporteAdicional
     {
+        public int IdImporte { get; set; }
+        public required decimal Monto { get; set; }
+        public required string Motivo { get; set; }
+        public required DateOnly Fecha { get; set; }
     }
 }

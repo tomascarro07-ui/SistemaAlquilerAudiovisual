@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Documentos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj",
+      "projectUniqueName": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj",
       "projectName": "AlquilerAudiovisual.Desktop",
-      "projectPath": "C:\\Users\\Admin\\OneDrive\\Documentos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj",
+      "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\OneDrive\\Documentos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\obj\\",
+      "outputPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

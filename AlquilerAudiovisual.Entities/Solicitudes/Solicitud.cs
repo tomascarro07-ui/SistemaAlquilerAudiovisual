@@ -19,11 +19,15 @@ namespace AlquilerAudiovisual.Entities.Solicitudes
         public required Cliente Cliente { get; set; }
         public required TipoEvento TipoEvento { get; set; }
         public required List<DetalleSolicitud> Detalles { get; set; } = new();
-        public required Contratacion Contratacion { get; set; }
+        public Contratacion? Contratacion { get; set; }
         public void CambiarEstado(EstadoSolicitud nuevo, string obs)
         {
             Estado = nuevo;
-            Historial.Add(new CambioEstadoSolicitud { EstadoNuevo = nuevo, FechaCambio = DateTime.Now, Observaciones = obs });
+            Historial.Add(new CambioEstadoSolicitud 
+            { EstadoNuevo = nuevo, 
+              FechaCambio = DateTime.Now, 
+              Observaciones = obs 
+            });
         }
     }
 }

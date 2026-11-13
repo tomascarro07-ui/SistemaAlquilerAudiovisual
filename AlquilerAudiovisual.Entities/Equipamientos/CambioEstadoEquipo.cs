@@ -5,7 +5,7 @@ namespace AlquilerAudiovisual.Entities.Equipamientos
     public class CambioEstadoEquipo
     {
         public int IdCambioEstado { get; set; }
-        public required DateTime FechaCambio { get; set; } = DateTime.Now;
+        public required DateOnly FechaCambio { get; set; } = DateOnly.FromDateTime(DateTime.Today);
         public required EstadoEquipo EstadoNuevo { get; set; }
         public string? Observaciones { get; set; }
     }

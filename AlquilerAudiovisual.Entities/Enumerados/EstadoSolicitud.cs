@@ -3,7 +3,6 @@
     public enum EstadoSolicitud
     {
         Pendiente = 1,
-        EnCurso,
         Aceptada,
         Modificada,
         Rechazada,

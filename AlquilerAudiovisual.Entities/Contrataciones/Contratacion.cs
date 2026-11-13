@@ -1,4 +1,5 @@
-﻿using AlquilerAudiovisual.Entities.Enumerados;
+﻿using AlquilerAudiovisual.Entities.Devoluciones;
+using AlquilerAudiovisual.Entities.Enumerados;
 
 namespace AlquilerAudiovisual.Entities.Contrataciones
 {
@@ -12,7 +13,7 @@ namespace AlquilerAudiovisual.Entities.Contrataciones
         public required List<CambioEstadoContratacion> Historial { get; set; }
         public required Pago Pago { get; set; }
         public ImporteAdicional? ImporteAdicional { get; set; }
-
+        public required List<EquipoContratado> EquiposContratados { get; set; }
         public void CalcularImporteTotal()
         {
             

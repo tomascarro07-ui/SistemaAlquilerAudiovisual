@@ -6,7 +6,7 @@ namespace AlquilerAudiovisual.Entities.Contrataciones
     {
         public int IdCambioEstado { get; set; }
         public required DateTime FechaCambio { get; set; } = DateTime.Now;
-        public required EstadoContratacion NuevoEstado { get; set; }
         public string? Observaciones { get; set; }
+        public required EstadoContratacion NuevoEstado { get; set; }
     }
 }

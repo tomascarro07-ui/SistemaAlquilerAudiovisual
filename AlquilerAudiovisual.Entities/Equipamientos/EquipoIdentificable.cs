@@ -14,6 +14,7 @@ namespace AlquilerAudiovisual.Entities.Equipamientos
 
         public override bool EstaDisponible(DateTime desde, DateTime hasta, int cantidad)
         {
+            //Hacer luego
             throw new NotImplementedException();
         }
     }

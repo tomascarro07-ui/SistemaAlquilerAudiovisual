@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\OneDrive\\Documentos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj": {}
+    "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\OneDrive\\Documentos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj": {
+    "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Documentos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj",
+        "projectUniqueName": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj",
         "projectName": "AlquilerAudiovisual.Dominio",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Documentos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj",
+        "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Documentos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\obj\\",
+        "outputPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

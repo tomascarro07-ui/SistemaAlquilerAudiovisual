@@ -9,7 +9,7 @@ namespace AlquilerAudiovisual.Entities.Contrataciones
         public int IdTarifa { get; set; }
         public required int DiasContrato { get; set; }
         public required DateOnly FechaInicio { get; set; }
-        public required DateOnly FechaFin { get; set; }
+        public DateOnly? FechaFin { get; set; }
         public required decimal PrecioVigente { get; set; }
         public required TipoEvento TipoEvento { get; set; }
         public required TipoCliente TipoCliente { get; set; }

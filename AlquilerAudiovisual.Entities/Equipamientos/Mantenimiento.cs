@@ -1,4 +1,6 @@
-﻿namespace AlquilerAudiovisual.Entities.Equipamientos
+﻿using AlquilerAudiovisual.Entities.Contrataciones;
+
+namespace AlquilerAudiovisual.Entities.Equipamientos
 {
     public class Mantenimiento
     {

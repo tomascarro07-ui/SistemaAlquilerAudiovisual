@@ -6,9 +6,6 @@ namespace AlquilerAudiovisual.Entities.Equipamientos
     {
         public required string NumeroSerie { get; set; }
         public required string CodigoInterno { get; set; }
-        public required List<Caracteristica> Caracteristicas { get; set; } = new();
-        public required EstadoEquipo Estado { get; set; }
-
         public void CambiarEstado(EstadoEquipo nuevo, string obs)
         {
             Estado = nuevo;

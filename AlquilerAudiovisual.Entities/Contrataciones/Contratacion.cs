@@ -8,8 +8,10 @@ namespace AlquilerAudiovisual.Entities.Contrataciones
         public required DateOnly Fecha { get; set; }
         public required DateOnly FechaInicioAlquiler { get; set; }
         public DateOnly FechaFinAlquiler { get; set; }
-        public required List<CambioEstadoContratacion> Historial { get; set; }
         public required EstadoContratacion Estado { get; set; }
+        public required List<CambioEstadoContratacion> Historial { get; set; }
+        public required Pago Pago { get; set; }
+        public ImporteAdicional ImporteAdicional { get; set; }
 
         public void CalcularImporteTotal()
         {

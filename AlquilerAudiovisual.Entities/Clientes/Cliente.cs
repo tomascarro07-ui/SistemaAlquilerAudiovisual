@@ -9,15 +9,16 @@ namespace AlquilerAudiovisual.Entities.Clientes
         public required string Documento { get; set; }
         public required string Nombre { get; set; }
         public required string Telefono { get; set; }
-        public required TipoCliente TipoCliente { get; set; }
-        public required TipoEvento TipoEvento { get; set; }
         public string? Correo { get; set; }
         public required string Direccion { get; set; }
         public bool Activo { get; set; } = true;
+        public required TipoCliente TipoCliente { get; set; }
 
-        public List<Solicitud> Solicitudes { get; set; }
-        public List<Contratacion> Contrataciones { get; set; }
         //Falta ModificarDatos();
+        public bool ModificarDatos()
+        {
+            return true;
+        }
         public void Desactivar()
         {
             Activo = false;

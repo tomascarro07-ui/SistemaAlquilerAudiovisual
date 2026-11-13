@@ -1,0 +1,12 @@
+﻿using AlquilerAudiovisual.Entities.Enumerados;
+
+namespace AlquilerAudiovisual.Entities.Contrataciones
+{
+    public class CambioEstadoContratacion
+    {
+        public int IdCambioEstado { get; set; }
+        public required DateTime FechaCambio { get; set; } = DateTime.Now;
+        public required EstadoContratacion NuevoEstado { get; set; }
+        public string? Observaciones { get; set; }
+    }
+}

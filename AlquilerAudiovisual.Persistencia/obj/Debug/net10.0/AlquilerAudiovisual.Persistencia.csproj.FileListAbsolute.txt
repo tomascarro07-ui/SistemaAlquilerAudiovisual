@@ -1,0 +1,15 @@
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.exe
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.deps.json
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.runtimeconfig.json
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.pdb
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\refint\AlquilerAudiovisual.Persistencia.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.pdb
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.genruntimeconfig.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\ref\AlquilerAudiovisual.Persistencia.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\Alquiler.26A77E81.Up2Date

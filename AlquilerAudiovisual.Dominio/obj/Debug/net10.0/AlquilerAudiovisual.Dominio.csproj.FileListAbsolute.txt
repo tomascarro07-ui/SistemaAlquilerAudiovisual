@@ -1,0 +1,15 @@
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.exe
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.deps.json
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.runtimeconfig.json
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.pdb
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\refint\AlquilerAudiovisual.Dominio.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.pdb
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.genruntimeconfig.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\ref\AlquilerAudiovisual.Dominio.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\Alquiler.A5214991.Up2Date

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AlquilerAudiovisual.Desktop/AlquilerAudiovisual.Desktop.csproj" />
+  <Project Path="AlquilerAudiovisual.Dominio/AlquilerAudiovisual.Dominio.csproj" />
+  <Project Path="AlquilerAudiovisual.Entities/AlquilerAudiovisual.Entities.csproj" />
+  <Project Path="AlquilerAudiovisual.Persistencia/AlquilerAudiovisual.Persistencia.csproj" />
+</Solution>

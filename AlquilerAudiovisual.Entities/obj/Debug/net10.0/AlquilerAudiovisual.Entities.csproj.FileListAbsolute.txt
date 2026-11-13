@@ -1,0 +1,4 @@
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.csproj.CoreCompileInputs.cache

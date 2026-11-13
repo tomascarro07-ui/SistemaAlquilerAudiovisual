@@ -1,0 +1,17 @@
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\bin\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.exe
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\bin\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.deps.json
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\bin\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.runtimeconfig.json
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\bin\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\bin\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.pdb
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.Form1.resources
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\refint\AlquilerAudiovisual.Desktop.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.pdb
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.genruntimeconfig.cache
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\ref\AlquilerAudiovisual.Desktop.dll
+C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\Alquiler.CD73C593.Up2Date

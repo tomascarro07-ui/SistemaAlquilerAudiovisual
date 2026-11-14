@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AlquilerAudiovisual.Entities.Devoluciones;
+
 
 namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
-    internal class IDalDevolucion
+    public interface IDalDevolucion
     {
+        void AgregarDevolucion(Devolucion devolucion);
+        List<Devolucion> ListarDevoluciones();
+        List<TipoProblema> ListarTiposProblemas();
     }
 }

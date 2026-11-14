@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AlquilerAudiovisual.Entities.Contrataciones;
+
 
 namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
-    internal class IDalContratacion
+    public interface IDalContratacion
     {
+        void AgregarContratacion(Contratacion contratacion);
+        void ActualizarContratacion(Contratacion contratacion);
+        Contratacion? ObtenerContratacionPorId(int idContratacion);
+        void AgregarPreparacion(Preparacion preparacion);
+        void ActualizarPreparacion(Preparacion preparacion);
+        List<Preparacion> ListarPreparaciones();
+        void AgregarTarifa(Tarifa tarifa);
+        List<Tarifa> ListarTarifas();
     }
 }

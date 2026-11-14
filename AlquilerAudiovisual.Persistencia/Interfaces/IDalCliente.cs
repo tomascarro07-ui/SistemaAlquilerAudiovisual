@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AlquilerAudiovisual.Entities.Clientes;
 
 namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
-    internal class IDalCliente
+    public interface IDalCliente
     {
+        void AgregarCliente(Cliente cliente);
+        void ActualizarCliente(Cliente cliente);
+        List<Cliente> ListarClientes();
+        Cliente? ObtenerClientePorId(int idCliente);
+        Cliente? ObtenerPorDocumento(string documento);
+        List<TipoCliente> ListarTipos();
     }
 }

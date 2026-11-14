@@ -1,10 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AlquilerAudiovisual.Entities.Equipamientos;
 
 namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
-    internal class IDalEquipamiento
+    public interface IDalEquipamiento
     {
+        void AgregarEquipo(Equipo equipo);
+        void ActualizarEquipo(Equipo equipo);
+        Equipo? ObtenerEquipoPorId(int idEquipo);
+        List<Equipo> ListarEquipos();
+        void AgregarTipoEquipamiento(TipoEquipamiento tipoEquipamiento);
+        List<TipoEquipamiento> ListarTiposEquipamientos();
+        void AgregarDeposito(Deposito deposito);
+        List<Deposito> ListarDepositos();
+        void AgregarMantenimiento(Mantenimiento mantenimiento);
+        List<Mantenimiento> ListarMantenimientos();
     }
 }

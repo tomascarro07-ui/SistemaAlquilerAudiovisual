@@ -4,7 +4,7 @@
     {
         public int IdDeposito { get; set; }
         public required string Nombre { get; set; }
-        public string? Descripcion { get; set; }
+        public required string Direccion { get; set; }
         public required List<Equipo> Equipos { get; set; } = new();
     }
 }

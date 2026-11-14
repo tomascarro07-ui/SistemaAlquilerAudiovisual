@@ -7,6 +7,7 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
     {
         void AgregarContratacion(Contratacion contratacion);
         void ActualizarContratacion(Contratacion contratacion);
+        List<Contratacion> ListarContrataciones();
         Contratacion? ObtenerContratacionPorId(int idContratacion);
         void AgregarPreparacion(Preparacion preparacion);
         void ActualizarPreparacion(Preparacion preparacion);

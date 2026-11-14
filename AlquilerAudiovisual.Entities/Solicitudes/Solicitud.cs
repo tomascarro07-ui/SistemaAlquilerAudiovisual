@@ -24,7 +24,8 @@ namespace AlquilerAudiovisual.Entities.Solicitudes
         {
             Estado = nuevo;
             Historial.Add(new CambioEstadoSolicitud 
-            { EstadoNuevo = nuevo, 
+            {
+              NuevoEstado = nuevo, 
               FechaCambio = DateTime.Now, 
               Observaciones = obs 
             });

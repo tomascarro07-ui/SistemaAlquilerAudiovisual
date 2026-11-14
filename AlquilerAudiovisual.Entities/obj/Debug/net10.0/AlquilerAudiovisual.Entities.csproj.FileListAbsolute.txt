@@ -2,3 +2,8 @@ C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Entit
 C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfoInputs.cache
 C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfo.cs
 C:\Users\Admin\OneDrive\Documentos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.csproj.CoreCompileInputs.cache
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfoInputs.cache
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfo.cs
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.csproj.CoreCompileInputs.cache
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.sourcelink.json

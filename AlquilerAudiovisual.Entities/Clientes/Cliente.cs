@@ -14,11 +14,14 @@ namespace AlquilerAudiovisual.Entities.Clientes
         public bool Activo { get; set; } = true;
         public required TipoCliente TipoCliente { get; set; }
 
-        //Falta ModificarDatos();
-        public bool ModificarDatos()
+        public void ModificarDatos(string nombre, string telefono, string correo, string direccion)
         {
-            return true;
+            Nombre = nombre;
+            Telefono = telefono;
+            Correo = correo;
+            Direccion = direccion;
         }
+
         public void Desactivar()
         {
             Activo = false;

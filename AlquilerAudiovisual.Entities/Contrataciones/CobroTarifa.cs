@@ -4,7 +4,7 @@
     {
         public required int CantidadUnidades { get; set; }
         public required decimal PrecioAplicado { get; set; }
-        public required Tarifa tarifa { get; set; }
+        public required Tarifa Tarifa { get; set; }
         public decimal CalcularSubtotal()
         {
             return PrecioAplicado * CantidadUnidades;

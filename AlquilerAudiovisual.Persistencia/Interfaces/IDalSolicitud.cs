@@ -10,6 +10,5 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
         List<Solicitud> ListarSolicitudes();
         void AgregarTipoEvento(TipoEvento tipo);
         List<TipoEvento> ListarTiposEventos();
-
     }
 }

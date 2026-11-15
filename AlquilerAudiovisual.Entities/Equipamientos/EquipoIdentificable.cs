@@ -6,7 +6,7 @@ namespace AlquilerAudiovisual.Entities.Equipamientos
     {
         public required string NumeroSerie { get; set; }
         public required string CodigoInterno { get; set; }
-        public void CambiarEstado(EstadoEquipo nuevo, string obs)
+        public override void CambiarEstado(EstadoEquipo nuevo, string obs)
         {
             Estado = nuevo;
             Historial.Add(new CambioEstadoEquipo { NuevoEstado = nuevo, FechaCambio = DateOnly.FromDateTime(DateTime.Today), Observaciones = obs });

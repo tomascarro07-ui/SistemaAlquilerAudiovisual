@@ -14,7 +14,8 @@ namespace AlquilerAudiovisual.Entities.Equipamientos
         public required EstadoEquipo Estado { get; set; } = EstadoEquipo.Disponible;
         public List<CambioEstadoEquipo> Historial { get; set; } = new();
         public required List<Caracteristica> Caracteristicas { get; set; } = new();
-        public required TipoEquipamiento TipoEquipamientos { get; set; }
+        public required TipoEquipamiento TipoEquipamiento { get; set; }
         public abstract bool EstaDisponible(DateTime desde, DateTime hasta, int cantidad);
+        public abstract void CambiarEstado(EstadoEquipo nuevo, string obs);
     }
 }

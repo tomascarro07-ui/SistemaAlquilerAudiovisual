@@ -61,8 +61,7 @@
   "projectFileDependencyGroups": {
     "net10.0-windows": [
       "AlquilerAudiovisual.Dominio >= 1.0.0",
-      "AlquilerAudiovisual.Entities >= 1.0.0",
-      "AlquilerAudiovisual.Persistencia >= 1.0.0"
+      "AlquilerAudiovisual.Entities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -103,9 +102,6 @@
             },
             "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
               "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj"
-            },
-            "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj": {
-              "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj"
             }
           }
         }

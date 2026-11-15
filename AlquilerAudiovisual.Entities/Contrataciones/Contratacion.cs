@@ -9,10 +9,10 @@ namespace AlquilerAudiovisual.Entities.Contrataciones
         public required DateOnly FechaInicioAlquiler { get; set; }
         public required DateOnly FechaFinAlquiler { get; set; }
         public EstadoContratacion Estado { get; set; }
-        public List<CobroTarifa>? CobrosTarifas { get; set; }
+        public List<CobroTarifa> CobrosTarifas { get; set; } = new();
         public List<CambioEstadoContratacion> Historial { get; set; } = new();
         public List<Pago>? Pagos { get; set; } = new();
-        public List<ImporteAdicional>? ImportesAdicionales { get; set; } = new();
+        public List<ImporteAdicional> ImportesAdicionales { get; set; } = new();
         public List<EquipoContratado> EquiposContratados { get; set; } = new();
         public decimal CalcularImporteTotal()
         {

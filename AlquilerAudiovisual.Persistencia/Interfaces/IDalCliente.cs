@@ -1,4 +1,5 @@
 ﻿using AlquilerAudiovisual.Entities.Clientes;
+using AlquilerAudiovisual.Entities.Solicitudes;
 
 namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
@@ -9,6 +10,7 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
         List<Cliente> ListarClientes();
         Cliente? ObtenerClientePorId(int idCliente);
         Cliente? ObtenerPorDocumento(string documento);
-        List<TipoCliente> ListarTipos();
+        void AgregarTipoCliente(TipoCliente tipo);
+        List<TipoCliente> ListarTipoClientes();
     }
 }

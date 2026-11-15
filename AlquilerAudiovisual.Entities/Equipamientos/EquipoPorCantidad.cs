@@ -1,4 +1,6 @@
-﻿namespace AlquilerAudiovisual.Entities.Equipamientos
+﻿using AlquilerAudiovisual.Entities.Enumerados;
+
+namespace AlquilerAudiovisual.Entities.Equipamientos
 {
     public class EquipoPorCantidad : Equipo
     {
@@ -11,6 +13,11 @@
             }
             Stock += diferencia;
 
+        }
+        public override void CambiarEstado(EstadoEquipo nuevo, string obs)
+        {
+            Estado = nuevo;
+            Historial.Add(new CambioEstadoEquipo { NuevoEstado = nuevo, FechaCambio = DateOnly.FromDateTime(DateTime.Today), Observaciones = obs });
         }
         public override bool EstaDisponible(DateTime desde, DateTime hasta, int cantidad)
         {

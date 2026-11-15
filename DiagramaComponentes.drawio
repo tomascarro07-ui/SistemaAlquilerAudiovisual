@@ -1,0 +1,155 @@
+<mxfile host="Electron">
+  <diagram id="componentes" name="Componentes">
+    <mxGraphModel dx="3125" dy="1575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1350" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=14;container=1;collapsible=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;roundedPerimeter=1;" value="«componente»&lt;br&gt;&lt;b&gt;Desktop&lt;/b&gt; &lt;i&gt;(Presentación)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="170" width="1930" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" parent="c2" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" width="26.209876543209877" x="1887.1111111111109" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" parent="c2" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Login&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="216.82716049382714" x="23.827160493827158" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" parent="c2" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Clientes&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="216.82716049382714" x="261.7583774250441" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" parent="c2" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Solicitudes&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="216.82716049382714" x="499.68959435626107" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" parent="c2" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Contrataciones y Pagos&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="216.82716049382714" x="737.6208112874779" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" parent="c2" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Tarifas&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="216.82716049382714" x="975.5520282186949" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" parent="c2" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Logística&lt;br&gt;(Preparación, Entrega, Devolución)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="216.82716049382714" x="1213.483245149912" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" parent="c2" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Equipos e Inventario&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="216.82716049382714" x="1451.4144620811287" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" parent="c2" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#6c8ebf;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Mantenimiento&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="216.82716049382714" x="1689.3456790123455" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=14;container=1;collapsible=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;roundedPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="560" width="1930" x="40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" parent="c13" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;fillColor=#ffffff;strokeColor=#82b366;rounded=1;roundedPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" width="26.209876543209877" x="1887.111111111111" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" parent="c13" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;fontSize=11;fillColor=#ffffff;strokeColor=#82b366;roundedPerimeter=1;" value="«componente» &lt;b&gt;Clientes&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;• Cliente&lt;br&gt;• TipoCliente" vertex="1">
+          <mxGeometry height="190" width="396.17" x="23.83" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" parent="c13" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;fontSize=11;fillColor=#ffffff;strokeColor=#82b366;roundedPerimeter=1;" value="«componente» &lt;b&gt;Solicitudes&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;• Solicitud&lt;br&gt;• DetalleSolicitud&lt;br&gt;• CambioEstadoSolicitud&lt;br&gt;• «enum» EstadoSolicitud&lt;br&gt;• TipoEvento" vertex="1">
+          <mxGeometry height="190" width="396.17" x="504.34" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" parent="c13" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;fontSize=11;fillColor=#ffffff;strokeColor=#82b366;roundedPerimeter=1;" value="«componente» &lt;b&gt;Contrataciones y Cobros&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;• Contratacion&lt;br&gt;• EquipoContratado&lt;br&gt;• CobroTarifa&lt;br&gt;• Pagos&lt;br&gt;• ImporteAdicional&lt;br&gt;• Valoracion" vertex="1">
+          <mxGeometry height="190" width="396.17" x="984.86" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" parent="c13" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;fontSize=11;fillColor=#ffffff;strokeColor=#82b366;roundedPerimeter=1;" value="«componente» &lt;b&gt;Tarifas&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;• Tarifa" vertex="1">
+          <mxGeometry height="190" width="396.17" x="1465.37" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" parent="c13" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;fontSize=11;fillColor=#ffffff;strokeColor=#82b366;fillColor=#f5f5f5;dashed=1;roundedPerimeter=1;" value="«interfaces»&lt;br&gt;&lt;b&gt;Contratos de Repositorio&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;• IDalCliente&lt;br&gt;• IDalContratacion&lt;br&gt;• IDalDevolucion&lt;br&gt;• IDalEquipamiento&lt;br&gt;• IDalSolicitud" vertex="1">
+          <mxGeometry height="190" width="396.17" x="23.83" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" parent="c13" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;fontSize=11;fillColor=#ffffff;strokeColor=#82b366;roundedPerimeter=1;" value="«componente» &lt;b&gt;Logística&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;• Preparacion&lt;br&gt;• SeleccionEquipo&lt;br&gt;• Sustitucion&lt;br&gt;• Entrega&lt;br&gt;• Devolucion&lt;br&gt;• VerificacionEquipo&lt;br&gt;• TipoProblema&lt;br&gt;• «enum» EstadoDevolucion" vertex="1">
+          <mxGeometry height="190" width="396.17" x="504.34" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" parent="c13" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;fontSize=11;fillColor=#ffffff;strokeColor=#82b366;roundedPerimeter=1;" value="«componente» &lt;b&gt;Equipos e Inventario&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;• Equipo (abstracta)&lt;br&gt;• EquipoIdentificable&lt;br&gt;• EquipoPorCantidad&lt;br&gt;• TipoEquipamiento&lt;br&gt;• Caracteristicas&lt;br&gt;• Deposito&lt;br&gt;• CambioEstadoEquipo&lt;br&gt;• «enum» EstadoEquipo" vertex="1">
+          <mxGeometry height="190" width="396.17" x="984.86" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" parent="c13" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;fontSize=11;fillColor=#ffffff;strokeColor=#82b366;roundedPerimeter=1;" value="«componente» &lt;b&gt;Mantenimiento&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;• Mantenimiento" vertex="1">
+          <mxGeometry height="190" width="396.17" x="1465.37" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="SngM0IMxrVnZcXp-V9Hu-1" parent="c13" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 14px; text-align: left;&quot;&gt;«componente»&lt;/span&gt;&lt;br style=&quot;font-size: 14px; text-align: left;&quot;&gt;&lt;b style=&quot;font-size: 14px; text-align: left;&quot;&gt;Dominio&lt;/b&gt;&lt;span style=&quot;font-size: 14px; text-align: left;&quot;&gt; &lt;/span&gt;&lt;i style=&quot;font-size: 14px; text-align: left;&quot;&gt;(Lógica de negocio)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="30" width="210" x="23.83" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" edge="1" parent="1" source="c16" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;" target="c15" value="«usa»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" edge="1" parent="1" source="c17" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;" target="c16" value="«usa»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c25" edge="1" parent="1" source="c17" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;" target="c18" value="«usa»">
+          <mxGeometry relative="1" x="0.02" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c26" edge="1" parent="1" source="c17" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;" target="c21" value="«usa»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c27" edge="1" parent="1" source="c20" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;" target="c21" value="«usa»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c28" edge="1" parent="1" source="c20" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;" target="c17" value="«usa»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c29" edge="1" parent="1" source="c22" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;" target="c21" value="«usa»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c30" edge="1" parent="1" source="c22" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;exitX=0.5;exitY=0;entryX=1;entryY=0.75;" target="c17" value="«usa»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c31" edge="1" parent="1" source="c18" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;entryX=0.5;entryY=0;" target="c15" value="«usa»">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1455" y="330" />
+              <mxPoint x="245" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=14;container=1;collapsible=0;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;roundedPerimeter=1;" value="«componente»&lt;br&gt;&lt;b&gt;Persistencia&lt;/b&gt; &lt;i&gt;(Acceso a datos)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="190" width="1930" x="40" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="c33" parent="c32" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;fillColor=#ffffff;strokeColor=#d79b00;rounded=1;roundedPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="24" width="26.209876543209877" x="1887.111111111111" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="c34" parent="c32" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#d79b00;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Repositorios&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;RepositorioCliente, RepositorioSolicitud, RepositorioContratacion, RepositorioTarifa, RepositorioEquipo, RepositorioLogistica, RepositorioMantenimiento&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="921.3168724279834" x="23.827160493827158" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c35" parent="c32" style="shape=component;align=left;spacingLeft=36;html=1;whiteSpace=wrap;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#d79b00;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Contexto de Datos&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Conexión / DbContext, mapeo de entidades&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="921.3168724279834" x="984.8559670781892" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c36" edge="1" parent="1" source="c34" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;" target="c35" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c37" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Base de Datos&lt;/b&gt;" vertex="1">
+          <mxGeometry height="100" width="140" x="860" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="c38" edge="1" parent="1" source="c2" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;fontSize=12;strokeWidth=2;" target="c13" value="«usa»">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c39" edge="1" parent="1" source="c2" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;fontSize=12;strokeWidth=2;exitX=1;exitY=0.5;" target="c32" value="«usa»">
+          <mxGeometry relative="1" x="-0.0326" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2040" y="125" />
+              <mxPoint x="2040" y="1060" />
+            </Array>
+            <mxPoint x="2040" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c40" edge="1" parent="1" source="c34" style="endArrow=block;endFill=0;endSize=12;dashed=1;html=1;rounded=1;fontSize=11;" target="c19" value="«realiza»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c41" edge="1" parent="1" source="c32" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;fontSize=12;strokeWidth=2;exitX=0.75;exitY=0;entryX=0.75;entryY=1;" target="c13" value="«usa»&lt;br&gt;(entidades)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c42" edge="1" parent="1" source="c35" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;fontSize=12;exitX=0.5;exitY=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="c37" value="SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fillColor=#ffffff;strokeColor=#999999;roundedPerimeter=1;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;- - -&amp;gt;  «usa»: dependencia.&lt;br&gt;- - -▷  «realiza»: implementa la interfaz.&lt;br&gt;&lt;i&gt;Clases agrupadas según el diagrama de clases.&lt;/i&gt;" vertex="1">
+          <mxGeometry height="80" width="420" x="40" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="c44" parent="1" style="text;html=1;align=center;fontSize=18;rounded=1;roundedPerimeter=1;" value="&lt;b&gt;Diagrama de Componentes – Sistema de Alquiler de Equipos&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="1620" x="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

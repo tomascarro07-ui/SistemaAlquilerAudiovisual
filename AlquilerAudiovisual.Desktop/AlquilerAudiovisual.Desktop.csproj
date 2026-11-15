@@ -11,7 +11,6 @@
   <ItemGroup>
     <ProjectReference Include="..\AlquilerAudiovisual.Dominio\AlquilerAudiovisual.Dominio.csproj" />
     <ProjectReference Include="..\AlquilerAudiovisual.Entities\AlquilerAudiovisual.Entities.csproj" />
-    <ProjectReference Include="..\AlquilerAudiovisual.Persistencia\AlquilerAudiovisual.Persistencia.csproj" />
   </ItemGroup>
 
 </Project>

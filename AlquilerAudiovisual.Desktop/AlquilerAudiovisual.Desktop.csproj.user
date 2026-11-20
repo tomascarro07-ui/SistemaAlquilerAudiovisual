@@ -1,8 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <Compile Update="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Clientes\FrmListadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Clientes\FrmRegistroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Contrataciones\FrmListadoContrataciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Contrataciones\FrmPreparacionEquipamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Contrataciones\FrmRegistroPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Devoluciones\FrmRegistroDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Equipamiento\FrmCambioEstadoEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Equipamiento\FrmGestionDepositos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Equipamiento\FrmGestionTiposEquipamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Equipamiento\FrmListadoEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Equipamiento\FrmRegistroEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reportes\FrmConsultaReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Solicitudes\FrmListadoSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Solicitudes\FrmRegistroSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>

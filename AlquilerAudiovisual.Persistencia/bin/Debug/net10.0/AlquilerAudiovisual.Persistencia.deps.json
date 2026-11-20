@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {
       "AlquilerAudiovisual.Persistencia/1.0.0": {
+        "dependencies": {
+          "AlquilerAudiovisual.Entities": "1.0.0"
+        },
         "runtime": {
           "AlquilerAudiovisual.Persistencia.dll": {}
+        }
+      },
+      "AlquilerAudiovisual.Entities/1.0.0": {
+        "runtime": {
+          "AlquilerAudiovisual.Entities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "AlquilerAudiovisual.Persistencia/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AlquilerAudiovisual.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

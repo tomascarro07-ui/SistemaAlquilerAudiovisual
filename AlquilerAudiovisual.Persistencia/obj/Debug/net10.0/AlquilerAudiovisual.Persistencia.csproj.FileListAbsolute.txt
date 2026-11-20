@@ -21,3 +21,11 @@ C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net1
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.dll
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\refint\AlquilerAudiovisual.Persistencia.dll
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.deps.json
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Entities.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\bin\Debug\net10.0\AlquilerAudiovisual.Entities.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\AlquilerAudiovisual.Persistencia.csproj.AssemblyReference.cache
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\Alquiler.26A77E81.Up2Date
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Persistencia\obj\Debug\net10.0\ref\AlquilerAudiovisual.Persistencia.dll

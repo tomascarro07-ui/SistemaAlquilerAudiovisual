@@ -7,14 +7,64 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {
       "AlquilerAudiovisual.Desktop/1.0.0": {
+        "dependencies": {
+          "AlquilerAudiovisual.Dominio": "1.0.0",
+          "AlquilerAudiovisual.Entities": "1.0.0"
+        },
         "runtime": {
           "AlquilerAudiovisual.Desktop.dll": {}
+        }
+      },
+      "AlquilerAudiovisual.Dominio/1.0.0": {
+        "dependencies": {
+          "AlquilerAudiovisual.Entities": "1.0.0",
+          "AlquilerAudiovisual.Persistencia": "1.0.0"
+        },
+        "runtime": {
+          "AlquilerAudiovisual.Dominio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AlquilerAudiovisual.Entities/1.0.0": {
+        "runtime": {
+          "AlquilerAudiovisual.Entities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AlquilerAudiovisual.Persistencia/1.0.0": {
+        "dependencies": {
+          "AlquilerAudiovisual.Entities": "1.0.0"
+        },
+        "runtime": {
+          "AlquilerAudiovisual.Persistencia.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "AlquilerAudiovisual.Desktop/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AlquilerAudiovisual.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AlquilerAudiovisual.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AlquilerAudiovisual.Persistencia/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

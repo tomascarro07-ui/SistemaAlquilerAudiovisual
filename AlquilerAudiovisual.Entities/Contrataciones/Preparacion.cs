@@ -10,7 +10,7 @@ namespace AlquilerAudiovisual.Entities.Contrataciones
         public string? Observaciones { get; set; }
         public required Contratacion Contratacion { get; set; }
         public required EstadoPreparacion Estado { get; set; } = EstadoPreparacion.EnCurso;
-        public List<CambioEstadoPreparacion>? Historial { get; set; }
+        public List<CambioEstadoPreparacion> Historial { get; set; } = new();
         public List<Sustitucion> Sustituciones { get; set; } = new();
         public List<SeleccionEquipo> Selecciones { get; set; } = new();
         public void AsignarUnidad()

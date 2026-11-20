@@ -9,7 +9,7 @@ namespace AlquilerAudiovisual.Entities.Equipamientos
         public override void CambiarEstado(EstadoEquipo nuevo, string obs)
         {
             Estado = nuevo;
-            Historial.Add(new CambioEstadoEquipo { NuevoEstado = nuevo, FechaCambio = DateOnly.FromDateTime(DateTime.Today), Observaciones = obs });
+            Historial.Add(new CambioEstadoEquipo { NuevoEstado = nuevo, FechaCambio = DateTime.Now, Observaciones = obs });
         }
 
         public override bool EstaDisponible(DateTime desde, DateTime hasta, int cantidad)

@@ -22,3 +22,12 @@ C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\A
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.dll
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\refint\AlquilerAudiovisual.Dominio.dll
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.deps.json
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Entities.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Entities.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\Alquiler.A5214991.Up2Date
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\ref\AlquilerAudiovisual.Dominio.dll

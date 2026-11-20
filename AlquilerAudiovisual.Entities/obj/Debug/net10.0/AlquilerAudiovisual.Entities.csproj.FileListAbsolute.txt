@@ -7,3 +7,11 @@ C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfo.cs
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.csproj.CoreCompileInputs.cache
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.sourcelink.json
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\bin\Debug\net10.0\AlquilerAudiovisual.Entities.deps.json
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\bin\Debug\net10.0\AlquilerAudiovisual.Entities.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\bin\Debug\net10.0\AlquilerAudiovisual.Entities.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\refint\AlquilerAudiovisual.Entities.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.pdb
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\ref\AlquilerAudiovisual.Entities.dll
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\Alquiler.73A7D894.Up2Date

@@ -5,7 +5,7 @@ namespace AlquilerAudiovisual.Entities.Contrataciones
     public class CambioEstadoPreparacion
     {
         public int IdCambioEstado { get; set; }
-        public DateOnly FechaCambio { get; set; } = DateOnly.FromDateTime(DateTime.Today);
+        public DateTime FechaCambio { get; set; } = DateTime.Now;
         public string? Observaciones { get; set; }
         public required EstadoPreparacion NuevoEstado { get; set; }
     }

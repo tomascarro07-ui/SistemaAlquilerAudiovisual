@@ -5,12 +5,12 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
     public interface IDalCliente
     {
-        void AgregarCliente(Cliente cliente);
-        void ActualizarCliente(Cliente cliente);
-        List<Cliente> ListarClientes();
+        int AgregarCliente(Cliente cliente);
+        bool ActualizarCliente(Cliente cliente);
+        List<Cliente> LeerClientes();
         Cliente? ObtenerClientePorId(int idCliente);
         Cliente? ObtenerPorDocumento(string documento);
-        void AgregarTipoCliente(TipoCliente tipo);
+        int AgregarTipoCliente(TipoCliente tipo);
         List<TipoCliente> ListarTipoClientes();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AlquilerAudiovisual.Entities.Clientes;
+using AlquilerAudiovisual.Persistencia.Interfaces;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -6,12 +7,11 @@ using System.Text;
 
 namespace AlquilerAudiovisual.Persistencia.DalDataBase
 {
-    public class ClienteDb
+    public class ClienteDb : IDalCliente
     {
-        private string CONNECTION_STRING = @"Data Source=DESKTOP-O6J4D0J\SQLEXPRESS;Initial Catalog=AlquilerAudiovisual;Integrated Security=True;Trust Server Certificate=True";
         public int AgregarCliente(Cliente cliente)
         {
-            SqlConnection connection = new SqlConnection(CONNECTION_STRING);
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
             try
             {
                 connection.Open();
@@ -44,7 +44,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
 
         public bool EliminarCliente(int id)
         {
-            SqlConnection connection = new SqlConnection(CONNECTION_STRING);
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
             try
             {
                 connection.Open();
@@ -69,7 +69,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
         public List<Cliente> LeerClientes()
         {
             List<Cliente> clientes = [];
-            SqlConnection connection = new SqlConnection(CONNECTION_STRING);
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
             try
             {
                 connection.Open();
@@ -111,7 +111,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
 
         public bool ActualizarCliente(Cliente cliente)
         {
-            SqlConnection connection = new SqlConnection(CONNECTION_STRING);
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
             try
             {
                 connection.Open();
@@ -138,6 +138,110 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                     connection.Close();
                 }
             }
+        }
+
+        public Cliente? ObtenerClientePorId(int idCliente)
+        {
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT c.IdCliente, c.Documento, c.Nombre, c.Telefono, c.Correo, c.Direccion, c.Activo, " +
+                    "t.IdTipoCliente, t.Nombre AS NombreTipo " +
+                    "FROM Cliente c INNER JOIN TipoCliente t ON c.IdTipoCliente = t.IdTipoCliente " +
+                    "WHERE c.IdCliente = @IdCliente", connection);
+                command.Parameters.AddWithValue("@IdCliente", idCliente);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    TipoCliente tipo = new TipoCliente
+                    {
+                        IdTipoCliente = reader.GetInt32(reader.GetOrdinal("IdTipoCliente")),
+                        Nombre = reader.GetString(reader.GetOrdinal("NombreTipo"))
+                    };
+
+                    return new Cliente
+                    (
+                        reader.GetInt32(reader.GetOrdinal("IdCliente")),
+                        reader.GetString(reader.GetOrdinal("Documento")),
+                        reader.GetString(reader.GetOrdinal("Nombre")),
+                        reader.GetString(reader.GetOrdinal("Telefono")),
+                        reader.IsDBNull(reader.GetOrdinal("Correo")) ? null : reader.GetString(reader.GetOrdinal("Correo")),
+                        reader.GetString(reader.GetOrdinal("Direccion")),
+                        reader.GetBoolean(reader.GetOrdinal("Activo")),
+                        tipo
+                    );
+                }
+            } 
+            catch(Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}");
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+            return null;
+        }
+
+        public Cliente? ObtenerPorDocumento(string documento)
+        {
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT c.IdCliente, c.Documento, c.Nombre, c.Telefono, c.Correo, c.Direccion, c.Activo, " +
+                    "t.IdTipoCliente, t.Nombre AS NombreTipo " +
+                    "FROM Cliente c INNER JOIN TipoCliente t ON c.IdTipoCliente = t.IdTipoCliente " +
+                    "WHERE c.Documento = @Documento", connection);
+                command.Parameters.AddWithValue("@Documento", documento);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    TipoCliente tipo = new TipoCliente
+                    {
+                        IdTipoCliente = reader.GetInt32(reader.GetOrdinal("IdTipoCliente")),
+                        Nombre = reader.GetString(reader.GetOrdinal("NombreTipo"))
+                    };
+
+                    return new Cliente
+                    (
+                        reader.GetInt32(reader.GetOrdinal("IdCliente")),
+                        reader.GetString(reader.GetOrdinal("Documento")),
+                        reader.GetString(reader.GetOrdinal("Nombre")),
+                        reader.GetString(reader.GetOrdinal("Telefono")),
+                        reader.IsDBNull(reader.GetOrdinal("Correo")) ? null : reader.GetString(reader.GetOrdinal("Correo")),
+                        reader.GetString(reader.GetOrdinal("Direccion")),
+                        reader.GetBoolean(reader.GetOrdinal("Activo")),
+                        tipo
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}");
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+            return null;
+        }
+
+        public void AgregarTipoCliente(TipoCliente tipo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<TipoCliente> ListarTipoClientes()
+        {
+            throw new NotImplementedException();
         }
     }
 }

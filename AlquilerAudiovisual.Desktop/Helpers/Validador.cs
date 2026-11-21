@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AlquilerAudiovisual.Desktop.Reportes
+namespace AlquilerAudiovisual.Desktop.Helpers
 {
     internal class Validador
     {

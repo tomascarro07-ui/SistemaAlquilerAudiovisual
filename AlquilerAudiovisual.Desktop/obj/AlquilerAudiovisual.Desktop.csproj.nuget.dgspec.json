@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj": {}
+    "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj": {}
   },
   "projects": {
-    "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj": {
+    "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj",
+        "projectUniqueName": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj",
         "projectName": "AlquilerAudiovisual.Desktop",
-        "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Desktop\\obj\\",
+        "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Desktop\\AlquilerAudiovisual.Desktop.csproj",
+        "packagesPath": "C:\\Users\\darib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Desktop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\darib\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
             "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj": {
-                "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj"
+              "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj": {
+                "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj"
               },
-              "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
-                "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj"
+              "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
+                "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj"
               }
             }
           }
@@ -52,7 +52,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0-windows": {
@@ -77,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -371,20 +371,20 @@
         }
       }
     },
-    "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj": {
+    "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj",
         "projectName": "AlquilerAudiovisual.Dominio",
-        "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Dominio\\AlquilerAudiovisual.Dominio.csproj",
+        "packagesPath": "C:\\Users\\darib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\darib\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -400,11 +400,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
-                "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj"
+              "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
+                "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj"
               },
-              "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj": {
-                "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj"
+              "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj": {
+                "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj"
               }
             }
           }
@@ -419,7 +419,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -447,7 +447,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -725,20 +725,20 @@
         }
       }
     },
-    "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
+    "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj",
         "projectName": "AlquilerAudiovisual.Entities",
-        "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\obj\\",
+        "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj",
+        "packagesPath": "C:\\Users\\darib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\darib\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -766,7 +766,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -788,7 +788,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1066,20 +1066,20 @@
         }
       }
     },
-    "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj": {
+    "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj",
         "projectName": "AlquilerAudiovisual.Persistencia",
-        "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Persistencia\\AlquilerAudiovisual.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\darib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\darib\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1095,8 +1095,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
-                "projectPath": "C:\\Proyectos\\AlquilerAudioVisual\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj"
+              "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj": {
+                "projectPath": "C:\\Users\\darib\\source\\repos\\SistemaAlquilerAudiovisualOk\\AlquilerAudiovisual.Entities\\AlquilerAudiovisual.Entities.csproj"
               }
             }
           }
@@ -1111,18 +1111,12 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[7.1.2, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -1139,7 +1133,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

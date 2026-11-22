@@ -6,7 +6,7 @@ using System.Text.Json;
 
 namespace AlquilerAudiovisual.Persistencia.FileProviders
 {
-    public class JsonFileProvider : IFileProvider
+    public class JsonFileProvider : IDalSolicitud
     {
         public void GuardarRegistros<T>(string filePath, List<T> registros)
         {

@@ -1,9 +1,6 @@
 ﻿using AlquilerAudiovisual.Entities.Clientes;
 using AlquilerAudiovisual.Persistencia.Interfaces;
 using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AlquilerAudiovisual.Persistencia.DalDataBase
 {
@@ -31,31 +28,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}");
-            }
-            finally
-            {
-                if (connection.State == System.Data.ConnectionState.Open)
-                {
-                    connection.Close();
-                }
-            }
-        }
-
-        public bool EliminarCliente(int id)
-        {
-            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
-            try
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand("DELETE FROM Cliente WHERE IdCliente = @IdCliente", connection);
-                command.Parameters.AddWithValue("@IdCliente", id);
-                int filasAfectadas = command.ExecuteNonQuery();
-                return filasAfectadas > 0;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}");
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
             }
             finally
             {
@@ -97,7 +70,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}");
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
             }
             finally
             {
@@ -129,7 +102,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}");
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
             }
             finally
             {
@@ -175,7 +148,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             } 
             catch(Exception ex)
             {
-                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}");
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
             }
             finally
             {
@@ -222,7 +195,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}");
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
             }
             finally
             {
@@ -234,14 +207,65 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             return null;
         }
 
-        public void AgregarTipoCliente(TipoCliente tipo)
+        public int AgregarTipoCliente(TipoCliente tipo)
         {
-            throw new NotImplementedException();
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("INSERT INTO TipoCliente(Nombre) " +
+                    "VALUES (@Nombre)", connection);
+                command.Parameters.AddWithValue("@Nombre", tipo.Nombre);
+                command.ExecuteNonQuery();
+                command.CommandText = "SELECT MAX(IdTipoCliente) FROM TipoCliente";
+                int tipoClienteId = Convert.ToInt32(command.ExecuteScalar());
+                return tipoClienteId;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
 
         public List<TipoCliente> ListarTipoClientes()
         {
-            throw new NotImplementedException();
+            List<TipoCliente> tipos = [];
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT t.IdTipoCliente, t.Nombre " +
+                    "FROM TipoCliente t", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    TipoCliente tipo = new TipoCliente
+                    {
+                        IdTipoCliente = reader.GetInt32(reader.GetOrdinal("IdTipoCliente")),
+                        Nombre = reader.GetString(reader.GetOrdinal("Nombre"))
+                    };
+                    tipos.Add(tipo);
+                }
+                return tipos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
     }
 }

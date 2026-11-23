@@ -4,11 +4,11 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
     public interface IDalSolicitud
     {
-        void AgregarSolicitud(Solicitud solicitud);
-        void ActualizarSolicitud(Solicitud solicitud);
+        int AgregarSolicitud(Solicitud solicitud);
+        bool ActualizarSolicitud(Solicitud solicitud);
         Solicitud? ObtenerSolicitudPorId(int idSolicitud);
-        List<Solicitud> ListarSolicitudes();
-        void AgregarTipoEvento(TipoEvento tipo);
-        List<TipoEvento> ListarTiposEventos();
+        List<Solicitud> LeerSolicitudes();
+        int AgregarTipoEvento(TipoEvento tipo);
+        List<TipoEvento> LeerTiposEventos();
     }
 }

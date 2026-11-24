@@ -1,18 +1,20 @@
 ﻿using AlquilerAudiovisual.Entities.Equipamientos;
+using Microsoft.Data.SqlClient;
 
 namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
     public interface IDalEquipamiento
     {
-        void AgregarEquipo(Equipo equipo);
-        void ActualizarEquipo(Equipo equipo);
+        bool ActualizarEquipo(Equipo equipo);
         Equipo? ObtenerEquipoPorId(int idEquipo);
         List<Equipo> ListarEquipos();
-        void AgregarTipoEquipamiento(TipoEquipamiento tipoEquipamiento);
+        int AgregarTipoEquipamiento(TipoEquipamiento tipoEquipamiento);
         List<TipoEquipamiento> ListarTiposEquipamientos();
-        void AgregarDeposito(Deposito deposito);
+        int AgregarDeposito(Deposito deposito);
         List<Deposito> ListarDepositos();
-        void AgregarMantenimiento(Mantenimiento mantenimiento);
+        int AgregarMantenimiento(Mantenimiento mantenimiento);
         List<Mantenimiento> ListarMantenimientos();
+        int AgregarEquipoIdentificable(EquipoIdentificable equipo);
+        int AgregarEquipoPorCantidad(EquipoPorCantidad equipo);
     }
 }

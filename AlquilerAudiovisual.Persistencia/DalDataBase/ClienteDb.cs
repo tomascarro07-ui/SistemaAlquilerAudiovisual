@@ -88,7 +88,8 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             try
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("UPDATE Cliente SET Documento = @Documento, Nombre = @Nombre, Telefono = @Telefono, Correo = @Correo, Direccion = @Direccion, Activo = @Activo, IdTipoCliente = @IdTipoCliente WHERE IdCliente = @IdCliente", connection);
+                SqlCommand command = new SqlCommand("UPDATE Cliente SET Documento = @Documento, Nombre = @Nombre, Telefono = @Telefono, Correo = @Correo, Direccion = @Direccion, Activo = @Activo, IdTipoCliente = @IdTipoCliente " +
+                    "WHERE IdCliente = @IdCliente", connection);
                 command.Parameters.AddWithValue("@IdCliente", cliente.IdCliente);
                 command.Parameters.AddWithValue("@Documento", cliente.Documento);
                 command.Parameters.AddWithValue("@Nombre", cliente.Nombre);

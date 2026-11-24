@@ -52,19 +52,19 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    int IdCliente = reader.GetInt32(reader.GetOrdinal("IdCliente"));
-                    string Documento = reader.GetString(reader.GetOrdinal("Documento"));
-                    string Nombre = reader.GetString(reader.GetOrdinal("Nombre"));
-                    string Telefono = reader.GetString(reader.GetOrdinal("Telefono"));
-                    string? Correo = reader.IsDBNull(reader.GetOrdinal("Correo")) ? null : reader.GetString(reader.GetOrdinal("Correo"));
-                    string Direccion = reader.GetString(reader.GetOrdinal("Direccion"));
-                    bool Activo = reader.GetBoolean(reader.GetOrdinal("Activo"));
+                    int idCliente = reader.GetInt32(reader.GetOrdinal("IdCliente"));
+                    string documento = reader.GetString(reader.GetOrdinal("Documento"));
+                    string nombre = reader.GetString(reader.GetOrdinal("Nombre"));
+                    string telefono = reader.GetString(reader.GetOrdinal("Telefono"));
+                    string? correo = reader.IsDBNull(reader.GetOrdinal("Correo")) ? null : reader.GetString(reader.GetOrdinal("Correo"));
+                    string direccion = reader.GetString(reader.GetOrdinal("Direccion"));
+                    bool activo = reader.GetBoolean(reader.GetOrdinal("Activo"));
                     TipoCliente tipoCliente = new TipoCliente
                     {
                         IdTipoCliente = reader.GetInt32(reader.GetOrdinal("IdTipoCliente")),
                         Nombre = reader.GetString(reader.GetOrdinal("NombreTipo"))
                     };
-                    Cliente cliente = new Cliente(IdCliente, Documento, Nombre, Telefono, Correo, Direccion, Activo, tipoCliente);
+                    Cliente cliente = new Cliente(idCliente, documento, nombre, telefono, correo, direccion, activo, tipoCliente);
                     clientes.Add(cliente);
                 }
             }

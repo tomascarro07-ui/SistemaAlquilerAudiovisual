@@ -1,7 +1,4 @@
-﻿using AlquilerAudiovisual.Entities.Contrataciones;
-using AlquilerAudiovisual.Persistencia.Interfaces;
-
-namespace AlquilerAudiovisual.Dominio
+﻿namespace AlquilerAudiovisual.Dominio
 {
     internal class GestorContrataciones
     {

@@ -5,14 +5,14 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
     public interface IDalContratacion
     {
-        void AgregarContratacion(Contratacion contratacion);
-        void ActualizarContratacion(Contratacion contratacion);
+        int AgregarContratacion(Contratacion contratacion);
+        bool ActualizarContratacion(Contratacion contratacion);
         List<Contratacion> ListarContrataciones();
         Contratacion? ObtenerContratacionPorId(int idContratacion);
-        void AgregarPreparacion(Preparacion preparacion);
-        void ActualizarPreparacion(Preparacion preparacion);
+        int AgregarPreparacion(Preparacion preparacion);
+        bool ActualizarPreparacion(Preparacion preparacion);
         List<Preparacion> ListarPreparaciones();
-        void AgregarTarifa(Tarifa tarifa);
+        int AgregarTarifa(Tarifa tarifa);
         List<Tarifa> ListarTarifas();
     }
 }

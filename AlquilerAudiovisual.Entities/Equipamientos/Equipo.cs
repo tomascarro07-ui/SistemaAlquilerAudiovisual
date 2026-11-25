@@ -13,16 +13,17 @@ namespace AlquilerAudiovisual.Entities.Equipamientos
         public string? Descripcion { get; set; }
         public EstadoEquipo Estado { get; set; } = EstadoEquipo.Disponible;
         public List<CambioEstadoEquipo> Historial { get; set; } = new();
-        public required List<Caracteristica> Caracteristicas { get; set; } = new();
+        public List<Caracteristica> Caracteristicas { get; set; } = new();
         public TipoEquipamiento TipoEquipamiento { get; set; }
         public Deposito Deposito { get; set; }
-        public Equipo(int idEquipo, string marca, string modelo, string? descripcion, EstadoEquipo estado, TipoEquipamiento tipoEquipamiento, Deposito deposito)
+        public Equipo(int idEquipo, string marca, string modelo, string? descripcion, EstadoEquipo estado, List<Caracteristica> caracteristicas, TipoEquipamiento tipoEquipamiento, Deposito deposito)
         {
             IdEquipo = idEquipo;
             Marca = marca;
             Modelo = modelo;
             Descripcion = descripcion;
             Estado = estado;
+            Caracteristicas = caracteristicas;
             TipoEquipamiento = tipoEquipamiento;
             Deposito = deposito;
         }

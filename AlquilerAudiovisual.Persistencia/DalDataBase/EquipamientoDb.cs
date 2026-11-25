@@ -1,12 +1,9 @@
-﻿using AlquilerAudiovisual.Entities.Enumerados;
+﻿using AlquilerAudiovisual.Entities.Contrataciones;
+using AlquilerAudiovisual.Entities.Enumerados;
 using AlquilerAudiovisual.Entities.Equipamientos;
 using AlquilerAudiovisual.Persistencia.Interfaces;
 using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
 
 namespace AlquilerAudiovisual.Persistencia.DalDataBase
 {
@@ -23,8 +20,8 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 command.Parameters.AddWithValue("@IdEquipo", equipo.IdEquipo);
                 command.Parameters.AddWithValue("@Marca", equipo.Marca);
                 command.Parameters.AddWithValue("@Modelo", equipo.Modelo);
-                command.Parameters.AddWithValue("@Descripcion", equipo.Descripcion);
-                command.Parameters.AddWithValue("@Estado", equipo.Estado);
+                command.Parameters.AddWithValue("@Descripcion", (object?)equipo.Descripcion ?? DBNull.Value);
+                command.Parameters.AddWithValue("@Estado", (int)equipo.Estado);
                 command.Parameters.AddWithValue("@IdTipoEquipamiento", equipo.TipoEquipamiento.IdTipoEquipamiento);
                 command.Parameters.AddWithValue("@IdDeposito", equipo.Deposito.IdDeposito);
                 int filasAfectadas = command.ExecuteNonQuery();
@@ -54,7 +51,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 command.Parameters.AddWithValue("@Nombre", deposito.Nombre);
                 command.Parameters.AddWithValue("@Direccion", deposito.Direccion);
                 command.ExecuteNonQuery();
-                command.CommandText = "SELECT MAX(IdDepositpo) FROM Deposito";
+                command.CommandText = "SELECT MAX(IdDeposito) FROM Deposito";
                 int idDeposito = Convert.ToInt32(command.ExecuteScalar());
                 return idDeposito;
             }
@@ -79,9 +76,9 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 connection.Open();
                 int idEquipo = AgregarEquipoBase(equipo, connection);
 
-                SqlCommand command = new SqlCommand("INSERT INTO EquipoIdentificable IdEquipo, NumeroSerie, CodigoInterno " +
+                SqlCommand command = new SqlCommand("INSERT INTO EquipoIdentificable (IdEquipo, NumeroSerie, CodigoInterno) " +
                     "VALUES(@IdEquipo, @NumeroSerie, @CodigoInterno)", connection);
-                command.Parameters.AddWithValue("@IdEquipo", equipo.IdEquipo);
+                command.Parameters.AddWithValue("@IdEquipo", idEquipo);
                 command.Parameters.AddWithValue("@NumeroSerie", equipo.NumeroSerie);
                 command.Parameters.AddWithValue("@CodigoInterno", equipo.CodigoInterno);
                 command.ExecuteNonQuery();
@@ -112,7 +109,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
 
                 SqlCommand command = new SqlCommand("INSERT INTO EquipoPorCantidad(IdEquipo, Stock) " +
                     "VALUES(@IdEquipo, @Stock)",connection);
-                command.Parameters.AddWithValue("@IdEquipo", equipo.IdEquipo);
+                command.Parameters.AddWithValue("@IdEquipo", idEquipo);
                 command.Parameters.AddWithValue("@Stock", equipo.Stock);
                 command.ExecuteNonQuery();
 
@@ -135,10 +132,10 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
         private int AgregarEquipoBase(Equipo equipo, SqlConnection connection)
         {
             SqlCommand command = new SqlCommand("INSERT INTO Equipo(Marca, Modelo, Descripcion, Estado, IdTipoEquipamiento, IdDeposito) " +
-                "VALUES(@Marca, @Modelo, @Descripcion, @Estado, @IdEquipamiento, @IdTipoEquipamiento, IdDeposito)", connection);
+                "VALUES(@Marca, @Modelo, @Descripcion, @Estado, @IdTipoEquipamiento, @IdDeposito)", connection);
             command.Parameters.AddWithValue("@Marca", equipo.Marca);
             command.Parameters.AddWithValue("@Modelo", equipo.Modelo);
-            command.Parameters.AddWithValue("@Descripcion", (object?)equipo.Descripcion == DBNull.Value);
+            command.Parameters.AddWithValue("@Descripcion", (object?)equipo.Descripcion ?? DBNull.Value);
             command.Parameters.AddWithValue("@Estado", (int)equipo.Estado);
             command.Parameters.AddWithValue("@IdTipoEquipamiento", equipo.TipoEquipamiento.IdTipoEquipamiento);
             command.Parameters.AddWithValue("@IdDeposito", equipo.Deposito.IdDeposito);
@@ -173,7 +170,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 command.Parameters.AddWithValue("@Resultado", (object?)mantenimiento.Resultado ?? DBNull.Value);
                 command.Parameters.AddWithValue("@Tipo", mantenimiento.Tipo);
                 command.Parameters.AddWithValue("@TrabajoRealizado", (object?)mantenimiento.TrabajoRealizado ?? DBNull.Value);
-                command.Parameters.AddWithValue("@Costo", (int)mantenimiento.Costo);
+                command.Parameters.AddWithValue("@Costo", mantenimiento.Costo);
                 command.Parameters.AddWithValue("@IdEquipo", mantenimiento.EquipoIdentificable.IdEquipo);
                 command.Parameters.AddWithValue("@IdContratacion", mantenimiento.Contratacion == null ? DBNull.Value : mantenimiento.Contratacion.IdContratacion);
                 command.ExecuteNonQuery();
@@ -203,7 +200,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 SqlCommand command = new SqlCommand("INSERT INTO TipoEquipamiento(Nombre, Descripcion) " +
                     "VALUES(@Nombre, @Descripcion)", connection);
                 command.Parameters.AddWithValue("@Nombre", tipoEquipamiento.Nombre);
-                command.Parameters.AddWithValue("@Nombre", tipoEquipamiento.Descripcion);
+                command.Parameters.AddWithValue("@Descripcion", tipoEquipamiento.Descripcion);
                 command.ExecuteNonQuery();
                 command.CommandText = "SELECT MAX(IdTipoEquipamiento) FROM TipoEquipamiento";
                 int tipoEquipamientoId = Convert.ToInt32(command.ExecuteScalar());
@@ -264,13 +261,13 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             try
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("SELECT e.IdEquipo, e.Marca, e.Modelo, e.Descripcion, e.Estado, " +
+                SqlCommand command = new SqlCommand("SELECT e.IdEquipo, e.Marca, e.Modelo, e.Descripcion, e.Estado AS EstadoEquipo, " +
                     "te.IdTipoEquipamiento, te.Nombre AS NombreTipoEquipamiento, " +
-                    "d.IdDeposito, d.Nombre AS NombreDeposito, d.Direccion " +
+                    "d.IdDeposito, d.Nombre AS NombreDeposito, d.Direccion, " +
                     "ei.NumeroSerie, ei.CodigoInterno, ep.Stock " +
                     "FROM Equipo e " +
                     "INNER JOIN TipoEquipamiento te ON e.IdTipoEquipamiento = te.IdTipoEquipamiento " +
-                    "INNER JOIN Deposito d ON e.Estado = d.IdDeposito " +
+                    "INNER JOIN Deposito d ON e.IdDeposito = d.IdDeposito " +
                     "LEFT JOIN EquipoIdentificable ei ON e.IdEquipo = ei.IdEquipo " +
                     "LEFT JOIN EquipoPorCantidad ep ON e.IdEquipo = ep.IdEquipo", connection);
                 SqlDataReader reader = command.ExecuteReader();
@@ -280,7 +277,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                     string marca = reader.GetString(reader.GetOrdinal("Marca"));
                     string modelo = reader.GetString(reader.GetOrdinal("Modelo"));
                     string? descripcion = reader.IsDBNull(reader.GetOrdinal("Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Descripcion"));
-                    EstadoEquipo estado = (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("IdEstado"));
+                    EstadoEquipo estado = (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo"));
 
                     TipoEquipamiento tipoEquipamiento = new TipoEquipamiento
                     {
@@ -298,33 +295,33 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                     if(!reader.IsDBNull(reader.GetOrdinal("NumeroSerie")))
                     {
                         equipos.Add(new EquipoIdentificable
-                        {
-                            IdEquipo = idEquipo,
-                            Marca = marca,
-                            Modelo = modelo,
-                            Descripcion = descripcion,
-                            Estado = estado,
-                            Caracteristicas = new List<Caracteristica>(),
-                            TipoEquipamiento = tipoEquipamiento,
-                            Deposito = deposito,
-                            NumeroSerie = reader.GetString(reader.GetOrdinal("NumeroSerie")),
-                            CodigoInterno = reader.GetString(reader.GetOrdinal("CodigoInterno"))
-                        });
+                        (
+                            idEquipo,
+                            marca,
+                            modelo,
+                            descripcion,
+                            estado,
+                            new List<Caracteristica>(),
+                            tipoEquipamiento,
+                            deposito,
+                            reader.GetString(reader.GetOrdinal("NumeroSerie")),
+                            reader.GetString(reader.GetOrdinal("CodigoInterno"))
+                        ));
                     } 
                     else
                     {
                         equipos.Add(new EquipoPorCantidad
-                        {
-                            IdEquipo = idEquipo,
-                            Marca = marca,
-                            Modelo = modelo,
-                            Descripcion = descripcion,
-                            Estado = estado,
-                            Caracteristicas = new List<Caracteristica>(),
-                            TipoEquipamiento = tipoEquipamiento,
-                            Deposito = deposito,
-                            Stock = reader.GetInt32(reader.GetOrdinal("Stock"))
-                        });
+                        (
+                            idEquipo,
+                            marca,
+                            modelo,
+                            descripcion,
+                            estado,
+                            new List<Caracteristica>(),
+                            tipoEquipamiento,
+                            deposito,
+                            reader.GetInt32(reader.GetOrdinal("Stock"))
+                        ));
                     }
                 }
                 return equipos;
@@ -350,32 +347,201 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand("SELECT m.IdMantenimiento, m.Fecha AS FechaMantenimiento, m.Motivo, m.Resultado, m.Tipo, m.TrabajoRealizado, m.Costo, " +
-                    "e.IdEquipo, e.Marca, e.Modelo, e.Descripcion, e.Estado AS EstadoEquipo, " +
+                    "e.IdEquipo, e.Marca, e.Modelo, e.Descripcion as DescripcionEquipo, e.Estado AS EstadoEquipo, " +
                     "ei.NumeroSerie, ei.CodigoInterno, " +
-                    "te.IdTipoEquipamiento, te.Nombre, te.Descripcion " +
-                    "c.IdContratacion, c.IdSolicitud, c.Fecha, c.FechaInicioAlquiler, c.FechaFinAlquiler, c.Estado AS EstadoContratacion " +
+                    "te.IdTipoEquipamiento, te.Nombre, te.Descripcion, " +
+                    "d.IdDeposito, d.Nombre AS NombreDeposito, d.Direccion, " +
+                    "c.IdContratacion, c.IdSolicitud, c.Fecha AS FechaContratacion, c.FechaInicioAlquiler, c.FechaFinAlquiler, c.Estado AS EstadoContratacion " +
                     "FROM Mantenimiento m " +
                     "INNER JOIN Equipo e ON m.IdEquipo = e.IdEquipo " +
-                    "INNER JOIN EquipoIdentificable te ON e.IdEquipo = ei.IdEquipo " +
-                    "INNER JOIN TipoEquipamiento e.IdTipoEquipamiento = te.IdTipoEquipamiento " +
+                    "INNER JOIN EquipoIdentificable ei ON e.IdEquipo = ei.IdEquipo " +
+                    "INNER JOIN TipoEquipamiento te ON e.IdTipoEquipamiento = te.IdTipoEquipamiento " +
                     "INNER JOIN Deposito d ON e.IdDeposito = d.IdDeposito " +
                     "LEFT JOIN Contratacion c ON m.IdContratacion = c.IdContratacion", connection);
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    
+                    TipoEquipamiento tipoEquipamiento = new TipoEquipamiento
+                    {
+                        IdTipoEquipamiento = reader.GetInt32(reader.GetOrdinal("IdTipoEquipamiento")),
+                        Nombre = reader.GetString(reader.GetOrdinal("Nombre"))
+                    };
+
+                    Deposito deposito = new Deposito
+                    {
+                        IdDeposito = reader.GetInt32(reader.GetOrdinal("IdDeposito")),
+                        Nombre = reader.GetString(reader.GetOrdinal("NombreDeposito")),
+                        Direccion = reader.GetString(reader.GetOrdinal("Direccion"))
+                    };
+
+                    EquipoIdentificable equipoIdentificable = new EquipoIdentificable
+                    (
+                        reader.GetInt32(reader.GetOrdinal("IdEquipo")),
+                        reader.GetString(reader.GetOrdinal("Marca")),
+                        reader.GetString(reader.GetOrdinal("Modelo")),
+                        reader.IsDBNull(reader.GetOrdinal("DescripcionEquipo")) ? null : reader.GetString(reader.GetOrdinal("DescripcionEquipo")),
+                        (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
+                        new List<Caracteristica>(),
+                        tipoEquipamiento,
+                        deposito,
+                        reader.GetString(reader.GetOrdinal("NumeroSerie")),
+                        reader.GetString(reader.GetOrdinal("CodigoInterno"))
+                    );
+
+                    Contratacion? contratacion = null;
+                    if (!reader.IsDBNull(reader.GetOrdinal("IdContratacion")))
+                    {
+                        contratacion = new Contratacion
+                        {
+                            IdContratacion = reader.GetInt32(reader.GetOrdinal("IdContratacion")),
+                            IdSolicitud = reader.GetInt32(reader.GetOrdinal("IdSolicitud")),
+                            Fecha = DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("FechaContratacion"))),
+                            FechaInicioAlquiler = DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("FechaInicioAlquiler"))),
+                            FechaFinAlquiler = DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("FechaFinAlquiler"))),
+                            Estado = (EstadoContratacion)reader.GetInt32(reader.GetOrdinal("EstadoContratacion"))
+                        };
+                    }
+
+                    Mantenimiento mantenimiento = new Mantenimiento
+                    {
+                        IdMantenimiento = reader.GetInt32(reader.GetOrdinal("IdMantenimiento")),
+                        Fecha = DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("FechaMantenimiento"))),
+                        Motivo = reader.GetString(reader.GetOrdinal("Motivo")),
+                        Resultado = reader.IsDBNull(reader.GetOrdinal("Resultado")) ? null : reader.GetString(reader.GetOrdinal("Resultado")),
+                        Tipo = reader.GetString(reader.GetOrdinal("Tipo")),
+                        TrabajoRealizado = reader.IsDBNull(reader.GetOrdinal("TrabajoRealizado")) ? null : reader.GetString(reader.GetOrdinal("TrabajoRealizado")),
+                        Costo = reader.GetDecimal(reader.GetOrdinal("Costo")),
+                        EquipoIdentificable = equipoIdentificable,
+                        Contratacion = contratacion
+                    };
+                    mantenimientos.Add(mantenimiento);
+                }
+                return mantenimientos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
                 }
             }
         }
 
         public List<TipoEquipamiento> ListarTiposEquipamientos()
         {
-            throw new NotImplementedException();
+            List<TipoEquipamiento> tipos = [];
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT te.IdTipoEquipamiento, te.Nombre, te.Descripcion " +
+                    "FROM TipoEquipamiento te", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    TipoEquipamiento tipo = new TipoEquipamiento
+                    {
+                        IdTipoEquipamiento = reader.GetInt32(reader.GetOrdinal("IdTipoEquipamiento")),
+                        Nombre = reader.GetString(reader.GetOrdinal("Nombre")),
+                        Descripcion = reader.GetString(reader.GetOrdinal("Descripcion"))
+                    };
+                    tipos.Add(tipo);
+                }
+                return tipos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
 
         public Equipo? ObtenerEquipoPorId(int idEquipo)
         {
-            throw new NotImplementedException();
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT e.IdEquipo, e.Marca, e.Modelo, e.Descripcion, e.Estado AS EstadoEquipo, " +
+                    "te.IdTipoEquipamiento, te.Nombre AS NombreTipoEquipamiento, te.Descripcion AS DescripcionTipoEquipamiento, " +
+                    "d.IdDeposito, d.Nombre AS NombreDeposito, d.Direccion, " +
+                    "ei.NumeroSerie, ei.CodigoInterno, ep.Stock " +
+                    "FROM Equipo e " +
+                    "INNER JOIN TipoEquipamiento te ON e.IdTipoEquipamiento = te.IdTipoEquipamiento " +
+                    "INNER JOIN Deposito d ON e.IdDeposito = d.IdDeposito " +
+                    "LEFT JOIN EquipoIdentificable ei ON e.IdEquipo = ei.IdEquipo " +
+                    "LEFT JOIN EquipoPorCantidad ep ON e.IdEquipo = ep.IdEquipo " +
+                    "WHERE e.IdEquipo = @IdEquipo", connection);
+                command.Parameters.AddWithValue("@IdEquipo", idEquipo);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    TipoEquipamiento tipoEquipamiento = new TipoEquipamiento
+                    {
+                        IdTipoEquipamiento = reader.GetInt32(reader.GetOrdinal("IdTipoEquipamiento")),
+                        Nombre = reader.GetString(reader.GetOrdinal("NombreTipoEquipamiento")),
+                        Descripcion = reader.GetString(reader.GetOrdinal("DescripcionTipoEquipamiento"))
+                    };
+
+                    Deposito deposito = new Deposito
+                    {
+                        IdDeposito = reader.GetInt32(reader.GetOrdinal("IdDeposito")),
+                        Nombre = reader.GetString(reader.GetOrdinal("NombreDeposito")),
+                        Direccion = reader.GetString(reader.GetOrdinal("Direccion"))
+                    };
+
+                    if (!reader.IsDBNull(reader.GetOrdinal("NumeroSerie")))
+                    {
+                        return new EquipoIdentificable
+                        (
+                            reader.GetInt32(reader.GetOrdinal("IdEquipo")),
+                            reader.GetString(reader.GetOrdinal("Marca")),
+                            reader.GetString(reader.GetOrdinal("Modelo")),
+                            reader.IsDBNull(reader.GetOrdinal("Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Descripcion")),
+                            (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
+                            new List<Caracteristica>(),
+                            tipoEquipamiento,
+                            deposito,
+                            reader.GetString(reader.GetOrdinal("NumeroSerie")),
+                            reader.GetString(reader.GetOrdinal("CodigoInterno"))
+                        );
+                    }
+                    return new EquipoPorCantidad
+                        (
+                            reader.GetInt32(reader.GetOrdinal("IdEquipo")),
+                            reader.GetString(reader.GetOrdinal("Marca")),
+                            reader.GetString(reader.GetOrdinal("Modelo")),
+                            reader.IsDBNull(reader.GetOrdinal("Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Descripcion")),
+                            (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
+                            new List<Caracteristica>(),
+                            tipoEquipamiento,
+                            deposito,
+                            reader.GetInt32(reader.GetOrdinal("Stock"))
+                        );
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
     }
 }

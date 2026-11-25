@@ -5,6 +5,11 @@ namespace AlquilerAudiovisual.Entities.Equipamientos
     public class EquipoPorCantidad : Equipo
     {
         public int Stock { get; set; }
+        public EquipoPorCantidad(int idEquipo, string marca, string modelo, string? descripcion, EstadoEquipo estado, List<Caracteristica> caracteristicas, TipoEquipamiento tipoEquipamiento, Deposito deposito, int stock)
+            :base(idEquipo, marca, modelo, descripcion, estado, caracteristicas, tipoEquipamiento, deposito)
+        {
+            Stock = stock;
+        }
         public void AjustarStock(int diferencia)
         {
             if(Stock + diferencia < 0)

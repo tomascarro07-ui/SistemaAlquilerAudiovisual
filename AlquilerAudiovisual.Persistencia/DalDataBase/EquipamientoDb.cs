@@ -3,28 +3,27 @@ using AlquilerAudiovisual.Entities.Enumerados;
 using AlquilerAudiovisual.Entities.Equipamientos;
 using AlquilerAudiovisual.Persistencia.Interfaces;
 using Microsoft.Data.SqlClient;
-using System.Data;
 
 namespace AlquilerAudiovisual.Persistencia.DalDataBase
 {
     public class EquipamientoDb : IDalEquipamiento
     {
-        public bool ActualizarEquipo(Equipo equipo)
+        public bool ActualizarEquipoIdentificable(EquipoIdentificable equipo)
         {
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
             try
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("UPDATE Equipo SET Marca = @Marca, Modelo = @Modelo, Descripcion = @Descripcion, Estado = @Estado, IdTipoEquipamiento = @IdTipoEquipamiento, IdDeposito = @IdDeposito " +
+                ActualizarEquipoBase(equipo, connection);
+
+                SqlCommand command = new SqlCommand("UPDATE EquipoIdentificable SET NumeroSerie = @NumeroSerie, CodigoInterno = @CodigoInterno " +
                     "WHERE IdEquipo = @IdEquipo", connection);
                 command.Parameters.AddWithValue("@IdEquipo", equipo.IdEquipo);
-                command.Parameters.AddWithValue("@Marca", equipo.Marca);
-                command.Parameters.AddWithValue("@Modelo", equipo.Modelo);
-                command.Parameters.AddWithValue("@Descripcion", (object?)equipo.Descripcion ?? DBNull.Value);
-                command.Parameters.AddWithValue("@Estado", (int)equipo.Estado);
-                command.Parameters.AddWithValue("@IdTipoEquipamiento", equipo.TipoEquipamiento.IdTipoEquipamiento);
-                command.Parameters.AddWithValue("@IdDeposito", equipo.Deposito.IdDeposito);
+                command.Parameters.AddWithValue("@NumeroSerie", equipo.NumeroSerie);
+                command.Parameters.AddWithValue("@CodigoInterno", equipo.CodigoInterno);
                 int filasAfectadas = command.ExecuteNonQuery();
+
+                ActualizarCaracteristicas(equipo, connection);
                 return filasAfectadas > 0;
             }
             catch (Exception ex)
@@ -38,6 +37,57 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                     connection.Close();
                 }
             }
+        }
+
+        public bool ActualizarEquipoPorCantidad(EquipoPorCantidad equipo)
+        {
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
+            try
+            {
+                connection.Open();
+                ActualizarEquipoBase(equipo, connection);
+                SqlCommand command = new SqlCommand("UPDATE EquipoPorCantidad SET Stock = @Stock " +
+                    "WHERE IdEquipo = @IdEquipo", connection);
+                command.Parameters.AddWithValue("@IdEquipo", equipo.IdEquipo);
+                command.Parameters.AddWithValue("@Stock", equipo.Stock);
+                int filasAfectadas = command.ExecuteNonQuery();
+
+                ActualizarCaracteristicas(equipo, connection);
+                return filasAfectadas > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        private void ActualizarEquipoBase(Equipo equipo, SqlConnection connection)
+        {
+            SqlCommand command = new SqlCommand("UPDATE Equipo SET Marca = @Marca, Modelo = @Modelo, Descripcion = @Descripcion, Estado = @Estado, IdTipoEquipamiento = @IdTipoEquipamiento, IdDeposito = @IdDeposito " +
+                "WHERE IdEquipo = @IdEquipo", connection);
+            command.Parameters.AddWithValue("@IdEquipo", equipo.IdEquipo);
+            command.Parameters.AddWithValue("@Marca", equipo.Marca);
+            command.Parameters.AddWithValue("@Modelo", equipo.Modelo);
+            command.Parameters.AddWithValue("@Descripcion", (object?)equipo.Descripcion ?? DBNull.Value);
+            command.Parameters.AddWithValue("@Estado", (int)equipo.Estado);
+            command.Parameters.AddWithValue("@IdTipoEquipamiento", equipo.TipoEquipamiento.IdTipoEquipamiento);
+            command.Parameters.AddWithValue("@IdDeposito", equipo.Deposito.IdDeposito);
+            command.ExecuteNonQuery();
+        }
+
+        private void ActualizarCaracteristicas(Equipo equipo, SqlConnection connection)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM Caracteristica WHERE IdEquipo = @IdEquipo", connection);
+            command.Parameters.AddWithValue("@IdEquipo", equipo.IdEquipo);
+            command.ExecuteNonQuery();
+            InsertarCaracteristicas(equipo, equipo.IdEquipo, connection);
         }
 
         public int AgregarDeposito(Deposito deposito)
@@ -108,7 +158,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 int idEquipo = AgregarEquipoBase(equipo, connection);
 
                 SqlCommand command = new SqlCommand("INSERT INTO EquipoPorCantidad(IdEquipo, Stock) " +
-                    "VALUES(@IdEquipo, @Stock)",connection);
+                    "VALUES(@IdEquipo, @Stock)", connection);
                 command.Parameters.AddWithValue("@IdEquipo", idEquipo);
                 command.Parameters.AddWithValue("@Stock", equipo.Stock);
                 command.ExecuteNonQuery();
@@ -146,7 +196,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
 
         private void InsertarCaracteristicas(Equipo equipo, int idEquipo, SqlConnection connection)
         {
-            foreach(Caracteristica caracteristica in equipo.Caracteristicas)
+            foreach (Caracteristica caracteristica in equipo.Caracteristicas)
             {
                 SqlCommand command = new SqlCommand("INSERT INTO Caracteristica(IdEquipo, Nombre, Valor) " +
                     "VALUES(@IdEquipo, @Nombre, @Valor)", connection);
@@ -200,7 +250,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 SqlCommand command = new SqlCommand("INSERT INTO TipoEquipamiento(Nombre, Descripcion) " +
                     "VALUES(@Nombre, @Descripcion)", connection);
                 command.Parameters.AddWithValue("@Nombre", tipoEquipamiento.Nombre);
-                command.Parameters.AddWithValue("@Descripcion", tipoEquipamiento.Descripcion);
+                command.Parameters.AddWithValue("@Descripcion", (object?)tipoEquipamiento.Descripcion ?? DBNull.Value);
                 command.ExecuteNonQuery();
                 command.CommandText = "SELECT MAX(IdTipoEquipamiento) FROM TipoEquipamiento";
                 int tipoEquipamientoId = Convert.ToInt32(command.ExecuteScalar());
@@ -292,7 +342,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                         Direccion = reader.GetString(reader.GetOrdinal("Direccion"))
                     };
 
-                    if(!reader.IsDBNull(reader.GetOrdinal("NumeroSerie")))
+                    if (!reader.IsDBNull(reader.GetOrdinal("NumeroSerie")))
                     {
                         equipos.Add(new EquipoIdentificable
                         (
@@ -301,13 +351,13 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             modelo,
                             descripcion,
                             estado,
-                            new List<Caracteristica>(),
+                            ListarCaracteristicas(idEquipo),
                             tipoEquipamiento,
                             deposito,
                             reader.GetString(reader.GetOrdinal("NumeroSerie")),
                             reader.GetString(reader.GetOrdinal("CodigoInterno"))
                         ));
-                    } 
+                    }
                     else
                     {
                         equipos.Add(new EquipoPorCantidad
@@ -317,7 +367,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             modelo,
                             descripcion,
                             estado,
-                            new List<Caracteristica>(),
+                            ListarCaracteristicas(idEquipo),
                             tipoEquipamiento,
                             deposito,
                             reader.GetInt32(reader.GetOrdinal("Stock"))
@@ -325,6 +375,42 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                     }
                 }
                 return equipos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public List<Caracteristica> ListarCaracteristicas(int idEquipo)
+        {
+            List<Caracteristica> caracteristicas = [];
+            SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT c.Nombre, c.Valor " +
+                    "FROM Caracteristica c " +
+                    "WHERE c.IdEquipo = @IdEquipo", connection);
+                command.Parameters.AddWithValue("@IdEquipo", idEquipo);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Caracteristica caracteristica = new Caracteristica
+                    {
+                        Nombre = reader.GetString(reader.GetOrdinal("Nombre")),
+                        Valor = reader.GetString(reader.GetOrdinal("Valor")),
+                    };
+                    caracteristicas.Add(caracteristica);
+                }
+                return caracteristicas;
             }
             catch (Exception ex)
             {
@@ -381,7 +467,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                         reader.GetString(reader.GetOrdinal("Modelo")),
                         reader.IsDBNull(reader.GetOrdinal("DescripcionEquipo")) ? null : reader.GetString(reader.GetOrdinal("DescripcionEquipo")),
                         (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
-                        new List<Caracteristica>(),
+                        ListarCaracteristicas(reader.GetInt32(reader.GetOrdinal("IdEquipo"))),
                         tipoEquipamiento,
                         deposito,
                         reader.GetString(reader.GetOrdinal("NumeroSerie")),
@@ -447,7 +533,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                     {
                         IdTipoEquipamiento = reader.GetInt32(reader.GetOrdinal("IdTipoEquipamiento")),
                         Nombre = reader.GetString(reader.GetOrdinal("Nombre")),
-                        Descripcion = reader.GetString(reader.GetOrdinal("Descripcion"))
+                        Descripcion = reader.IsDBNull(reader.GetOrdinal("Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Descripcion"))
                     };
                     tipos.Add(tipo);
                 }
@@ -490,7 +576,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                     {
                         IdTipoEquipamiento = reader.GetInt32(reader.GetOrdinal("IdTipoEquipamiento")),
                         Nombre = reader.GetString(reader.GetOrdinal("NombreTipoEquipamiento")),
-                        Descripcion = reader.GetString(reader.GetOrdinal("DescripcionTipoEquipamiento"))
+                        Descripcion = reader.IsDBNull(reader.GetOrdinal("DescripcionTipoEquipamiento")) ? null : reader.GetString(reader.GetOrdinal("DescripcionTipoEquipamiento"))
                     };
 
                     Deposito deposito = new Deposito
@@ -509,7 +595,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             reader.GetString(reader.GetOrdinal("Modelo")),
                             reader.IsDBNull(reader.GetOrdinal("Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Descripcion")),
                             (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
-                            new List<Caracteristica>(),
+                            ListarCaracteristicas(idEquipo),
                             tipoEquipamiento,
                             deposito,
                             reader.GetString(reader.GetOrdinal("NumeroSerie")),
@@ -523,7 +609,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             reader.GetString(reader.GetOrdinal("Modelo")),
                             reader.IsDBNull(reader.GetOrdinal("Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Descripcion")),
                             (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
-                            new List<Caracteristica>(),
+                            ListarCaracteristicas(idEquipo),
                             tipoEquipamiento,
                             deposito,
                             reader.GetInt32(reader.GetOrdinal("Stock"))

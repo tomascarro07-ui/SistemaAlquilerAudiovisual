@@ -146,8 +146,8 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                         tipo
                     );
                 }
-            } 
-            catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception($"Error al conectarse con la base de datos: {ex.Message}", ex);
             }

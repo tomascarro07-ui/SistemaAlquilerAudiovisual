@@ -5,8 +5,9 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
 {
     public interface IDalEquipamiento
     {
-        bool ActualizarEquipo(Equipo equipo);
-        Equipo? ObtenerEquipoPorId(int idEquipo);
+        bool ActualizarEquipoIdentificable(EquipoIdentificable equipo);
+        bool ActualizarEquipoPorCantidad(EquipoPorCantidad equipo);
+        List<Caracteristica> ListarCaracteristicas(int idEquipo); Equipo? ObtenerEquipoPorId(int idEquipo);
         List<Equipo> ListarEquipos();
         int AgregarTipoEquipamiento(TipoEquipamiento tipoEquipamiento);
         List<TipoEquipamiento> ListarTiposEquipamientos();

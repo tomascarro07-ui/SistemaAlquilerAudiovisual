@@ -15,16 +15,3 @@ C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.pdb
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\ref\AlquilerAudiovisual.Entities.dll
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\Alquiler.73A7D894.Up2Date
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\bin\Debug\net10.0\AlquilerAudiovisual.Entities.deps.json
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\bin\Debug\net10.0\AlquilerAudiovisual.Entities.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\bin\Debug\net10.0\AlquilerAudiovisual.Entities.pdb
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfoInputs.cache
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.AssemblyInfo.cs
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.csproj.CoreCompileInputs.cache
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.sourcelink.json
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\refint\AlquilerAudiovisual.Entities.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\AlquilerAudiovisual.Entities.pdb
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\ref\AlquilerAudiovisual.Entities.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Entities\obj\Debug\net10.0\Alquiler.73A7D894.Up2Date

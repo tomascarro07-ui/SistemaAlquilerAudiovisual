@@ -31,21 +31,3 @@ C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\A
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.pdb
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\Alquiler.A5214991.Up2Date
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\ref\AlquilerAudiovisual.Dominio.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.deps.json
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Dominio.pdb
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Entities.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Entities.pdb
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\bin\Debug\net10.0\AlquilerAudiovisual.Persistencia.pdb
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.csproj.AssemblyReference.cache
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.AssemblyInfoInputs.cache
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.AssemblyInfo.cs
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.csproj.CoreCompileInputs.cache
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.sourcelink.json
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\Alquiler.A5214991.Up2Date
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\refint\AlquilerAudiovisual.Dominio.dll
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\AlquilerAudiovisual.Dominio.pdb
-C:\Users\darib\OneDrive\Desktop\test2 -GestorAudiovisual\AlquilerAudiovisual.Dominio\obj\Debug\net10.0\ref\AlquilerAudiovisual.Dominio.dll

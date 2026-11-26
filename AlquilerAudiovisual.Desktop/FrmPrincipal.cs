@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlquilerAudiovisual.Desktop.Clientes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,27 @@ namespace AlquilerAudiovisual.Desktop
 {
     public partial class FrmPrincipal : Form
     {
+        private Form? formActual;
+
+        private void AbrirEnPanel(Form formulario)
+        {
+            formActual?.Close();          // cierra el que estaba abierto
+            formActual = formulario;
+            formulario.TopLevel = false;  // lo vuelve "hijo" en vez de ventana
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            pnlContenido.Controls.Add(formulario);
+            formulario.BringToFront();
+            formulario.Show();
+        }
         public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void listadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanel(new FrmListadoClientes());
         }
     }
 }

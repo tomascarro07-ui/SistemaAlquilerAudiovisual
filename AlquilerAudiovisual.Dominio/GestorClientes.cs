@@ -21,7 +21,7 @@ namespace AlquilerAudiovisual.Dominio
         {
             ValidarCliente(cliente);
             Cliente? existente = dalCliente.ObtenerPorDocumento(cliente.Documento);
-            if(existente != null && existente.IdCliente != cliente.IdCliente)
+            if (existente != null && existente.IdCliente != cliente.IdCliente)
             {
                 throw new Exception("Ya existe otro cliente con ese documento");
             }
@@ -31,7 +31,7 @@ namespace AlquilerAudiovisual.Dominio
         public bool DesactivarCliente(int idCliente)
         {
             Cliente? cliente = dalCliente.ObtenerClientePorId(idCliente);
-            if(cliente == null)
+            if (cliente == null)
             {
                 return false;
             }
@@ -49,7 +49,7 @@ namespace AlquilerAudiovisual.Dominio
             return dalCliente.ObtenerClientePorId(idCliente);
         }
 
-        public Cliente? ObtenerPorDocument(string documento)
+        public Cliente? ObtenerPorDocumento(string documento) 
         {
             return dalCliente.ObtenerPorDocumento(documento);
         }
@@ -67,8 +67,6 @@ namespace AlquilerAudiovisual.Dominio
         {
             return dalCliente.LeerTipoClientes();
         }
-
-        //Falta validar que la cedula no se repita
         private void ValidarCliente(Cliente cliente)
         {
             if (string.IsNullOrWhiteSpace(cliente.Documento))

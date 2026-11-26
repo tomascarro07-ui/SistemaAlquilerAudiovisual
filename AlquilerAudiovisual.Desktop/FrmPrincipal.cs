@@ -1,4 +1,5 @@
-﻿using AlquilerAudiovisual.Desktop.Clientes;
+﻿#region
+using AlquilerAudiovisual.Desktop.Clientes;
 using AlquilerAudiovisual.Desktop.Contrataciones;
 using AlquilerAudiovisual.Desktop.Devoluciones;
 using AlquilerAudiovisual.Desktop.Equipamiento;
@@ -11,6 +12,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+#endregion
 
 namespace AlquilerAudiovisual.Desktop
 {

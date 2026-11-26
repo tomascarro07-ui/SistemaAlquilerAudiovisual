@@ -7,8 +7,7 @@ namespace AlquilerAudiovisual.Dominio
     public class GestorClientes
     {
         private readonly IDalCliente dalCliente = new ClienteDb();
-
-        public int RegistrarCliente(Cliente cliente)
+        public int AgregarCliente(Cliente cliente)
         {
             ValidarCliente(cliente);
             if (dalCliente.ObtenerPorDocumento(cliente.Documento) != null)
@@ -18,16 +17,21 @@ namespace AlquilerAudiovisual.Dominio
             return dalCliente.AgregarCliente(cliente);
         }
 
-        public bool ModificarCliente(Cliente cliente)
+        public bool ActualizarCliente(Cliente cliente)
         {
             ValidarCliente(cliente);
+            Cliente? existente = dalCliente.ObtenerPorDocumento(cliente.Documento);
+            if(existente != null && existente.IdCliente != cliente.IdCliente)
+            {
+                throw new Exception("Ya existe otro cliente con ese documento");
+            }
             return dalCliente.ActualizarCliente(cliente);
         }
 
         public bool DesactivarCliente(int idCliente)
         {
             Cliente? cliente = dalCliente.ObtenerClientePorId(idCliente);
-            if (cliente == null)
+            if(cliente == null)
             {
                 return false;
             }
@@ -35,26 +39,36 @@ namespace AlquilerAudiovisual.Dominio
             return dalCliente.ActualizarCliente(cliente);
         }
 
-        public List<Cliente> ListarClientes()
+        public List<Cliente> LeerClientes()
         {
             return dalCliente.LeerClientes();
         }
 
-        public Cliente? BuscarPorDocumento(string documento)
+        public Cliente? ObtenerClientePorId(int idCliente)
+        {
+            return dalCliente.ObtenerClientePorId(idCliente);
+        }
+
+        public Cliente? ObtenerPorDocument(string documento)
         {
             return dalCliente.ObtenerPorDocumento(documento);
         }
 
-        public int RegistrarTipoCliente(TipoCliente tipo)
+        public int AgregarTipoCliente(TipoCliente tipo)
         {
+            if (string.IsNullOrWhiteSpace(tipo.Nombre))
+            {
+                throw new Exception("El nombre del tipo de cliente es obligatorio");
+            }
             return dalCliente.AgregarTipoCliente(tipo);
         }
 
-        public List<TipoCliente> ListarTiposClientes()
+        public List<TipoCliente> LeerTipoClientes()
         {
-            return dalCliente.ListarTipoClientes();
+            return dalCliente.LeerTipoClientes();
         }
 
+        //Falta validar que la cedula no se repita
         private void ValidarCliente(Cliente cliente)
         {
             if (string.IsNullOrWhiteSpace(cliente.Documento))

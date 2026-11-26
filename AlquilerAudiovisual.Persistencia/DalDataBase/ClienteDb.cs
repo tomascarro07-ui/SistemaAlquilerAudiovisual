@@ -235,7 +235,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<TipoCliente> ListarTipoClientes()
+        public List<TipoCliente> LeerTipoClientes()
         {
             List<TipoCliente> tipos = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);

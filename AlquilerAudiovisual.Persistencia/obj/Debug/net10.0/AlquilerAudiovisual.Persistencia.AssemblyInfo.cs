@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlquilerAudiovisual.Persistencia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7ac7002688692ba1f908726b2b690bf5191e551")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11c1b0175f95b0207c4ee068a2b554366e35ee39")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlquilerAudiovisual.Persistencia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlquilerAudiovisual.Persistencia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

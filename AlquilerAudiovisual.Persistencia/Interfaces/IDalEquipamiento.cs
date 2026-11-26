@@ -7,14 +7,14 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
     {
         bool ActualizarEquipoIdentificable(EquipoIdentificable equipo);
         bool ActualizarEquipoPorCantidad(EquipoPorCantidad equipo);
-        List<Caracteristica> ListarCaracteristicas(int idEquipo); Equipo? ObtenerEquipoPorId(int idEquipo);
-        List<Equipo> ListarEquipos();
+        List<Caracteristica> LeerCaracteristicas(int idEquipo); Equipo? ObtenerEquipoPorId(int idEquipo);
+        List<Equipo> LeerEquipos();
         int AgregarTipoEquipamiento(TipoEquipamiento tipoEquipamiento);
-        List<TipoEquipamiento> ListarTiposEquipamientos();
+        List<TipoEquipamiento> LeerTiposEquipamientos();
         int AgregarDeposito(Deposito deposito);
-        List<Deposito> ListarDepositos();
+        List<Deposito> LeerDepositos();
         int AgregarMantenimiento(Mantenimiento mantenimiento);
-        List<Mantenimiento> ListarMantenimientos();
+        List<Mantenimiento> LeerMantenimientos();
         int AgregarEquipoIdentificable(EquipoIdentificable equipo);
         int AgregarEquipoPorCantidad(EquipoPorCantidad equipo);
     }

@@ -98,7 +98,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<Devolucion> ListarDevoluciones()
+        public List<Devolucion> LeerDevoluciones()
         {
             List<Devolucion> devoluciones = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -129,7 +129,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                         Hora = TimeOnly.FromTimeSpan(reader.GetTimeSpan(reader.GetOrdinal("Hora"))),
                         Lugar = reader.IsDBNull(reader.GetOrdinal("Lugar")) ? null : reader.GetString(reader.GetOrdinal("Lugar")),
                         Contratacion = contratacion,
-                        Verificaciones = ListarVerificaciones(reader.GetInt32(reader.GetOrdinal("IdDevolucion")))
+                        Verificaciones = LeerVerificaciones(reader.GetInt32(reader.GetOrdinal("IdDevolucion")))
                     };
                     devoluciones.Add(devolucion);
                 }
@@ -148,7 +148,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        private List<VerificacionEquipo> ListarVerificaciones(int idDevolucion)
+        private List<VerificacionEquipo> LeerVerificaciones(int idDevolucion)
         {
             List<VerificacionEquipo> verificaciones = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -173,8 +173,8 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             Observaciones = reader.GetString(reader.GetOrdinal("Observaciones")),
                             Cantidad = reader.GetInt32(reader.GetOrdinal("Cantidad")),
                             Estado = (EstadoDevolucion)reader.GetInt32(reader.GetOrdinal("IdEstado")),
-                            ImportesAdicionales = ListarImportesAdicionales(idVerificacion),
-                            Problemas = ListarProblemas(idVerificacion),
+                            ImportesAdicionales = LeerImportesAdicionales(idVerificacion),
+                            Problemas = LeerProblemas(idVerificacion),
                             Equipo = equipo
                         };
                         verificaciones.Add(verificacion);
@@ -195,7 +195,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        private List<TipoProblema> ListarProblemas(int idVerificacion)
+        private List<TipoProblema> LeerProblemas(int idVerificacion)
         {
             List<TipoProblema> problemas = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -233,7 +233,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        private List<ImporteAdicional> ListarImportesAdicionales(int idVerificacion)
+        private List<ImporteAdicional> LeerImportesAdicionales(int idVerificacion)
         {
             List<ImporteAdicional> importes = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -271,7 +271,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<TipoProblema> ListarTiposProblemas()
+        public List<TipoProblema> LeerTiposProblemas()
         {
             List<TipoProblema> tiposProblemas = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);

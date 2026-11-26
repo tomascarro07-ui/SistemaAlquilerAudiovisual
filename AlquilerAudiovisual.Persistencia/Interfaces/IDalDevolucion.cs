@@ -8,8 +8,8 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
     public interface IDalDevolucion
     {
         void AgregarDevolucion(Devolucion devolucion);
-        List<Devolucion> ListarDevoluciones();
+        List<Devolucion> LeerDevoluciones();
         void AgregarTipoProblema(TipoProblema tipo);
-        List<TipoProblema> ListarTiposProblemas();
+        List<TipoProblema> LeerTiposProblemas();
     }
 }

@@ -269,7 +269,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<Deposito> ListarDepositos()
+        public List<Deposito> LeerDepositos()
         {
             List<Deposito> depositos = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -304,7 +304,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<Equipo> ListarEquipos()
+        public List<Equipo> LeerEquipos()
         {
             List<Equipo> equipos = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -351,7 +351,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             modelo,
                             descripcion,
                             estado,
-                            ListarCaracteristicas(idEquipo),
+                            LeerCaracteristicas(idEquipo),
                             tipoEquipamiento,
                             deposito,
                             reader.GetString(reader.GetOrdinal("NumeroSerie")),
@@ -367,7 +367,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             modelo,
                             descripcion,
                             estado,
-                            ListarCaracteristicas(idEquipo),
+                            LeerCaracteristicas(idEquipo),
                             tipoEquipamiento,
                             deposito,
                             reader.GetInt32(reader.GetOrdinal("Stock"))
@@ -389,7 +389,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<Caracteristica> ListarCaracteristicas(int idEquipo)
+        public List<Caracteristica> LeerCaracteristicas(int idEquipo)
         {
             List<Caracteristica> caracteristicas = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -425,7 +425,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<Mantenimiento> ListarMantenimientos()
+        public List<Mantenimiento> LeerMantenimientos()
         {
             List<Mantenimiento> mantenimientos = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -467,7 +467,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                         reader.GetString(reader.GetOrdinal("Modelo")),
                         reader.IsDBNull(reader.GetOrdinal("DescripcionEquipo")) ? null : reader.GetString(reader.GetOrdinal("DescripcionEquipo")),
                         (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
-                        ListarCaracteristicas(reader.GetInt32(reader.GetOrdinal("IdEquipo"))),
+                        LeerCaracteristicas(reader.GetInt32(reader.GetOrdinal("IdEquipo"))),
                         tipoEquipamiento,
                         deposito,
                         reader.GetString(reader.GetOrdinal("NumeroSerie")),
@@ -517,7 +517,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<TipoEquipamiento> ListarTiposEquipamientos()
+        public List<TipoEquipamiento> LeerTiposEquipamientos()
         {
             List<TipoEquipamiento> tipos = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -595,7 +595,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             reader.GetString(reader.GetOrdinal("Modelo")),
                             reader.IsDBNull(reader.GetOrdinal("Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Descripcion")),
                             (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
-                            ListarCaracteristicas(idEquipo),
+                            LeerCaracteristicas(idEquipo),
                             tipoEquipamiento,
                             deposito,
                             reader.GetString(reader.GetOrdinal("NumeroSerie")),
@@ -609,7 +609,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                             reader.GetString(reader.GetOrdinal("Modelo")),
                             reader.IsDBNull(reader.GetOrdinal("Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Descripcion")),
                             (EstadoEquipo)reader.GetInt32(reader.GetOrdinal("EstadoEquipo")),
-                            ListarCaracteristicas(idEquipo),
+                            LeerCaracteristicas(idEquipo),
                             tipoEquipamiento,
                             deposito,
                             reader.GetInt32(reader.GetOrdinal("Stock"))

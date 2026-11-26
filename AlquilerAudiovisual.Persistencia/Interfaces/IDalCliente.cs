@@ -11,6 +11,6 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
         Cliente? ObtenerClientePorId(int idCliente);
         Cliente? ObtenerPorDocumento(string documento);
         int AgregarTipoCliente(TipoCliente tipo);
-        List<TipoCliente> ListarTipoClientes();
+        List<TipoCliente> LeerTipoClientes();
     }
 }

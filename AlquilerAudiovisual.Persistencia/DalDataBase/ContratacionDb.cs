@@ -165,7 +165,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
             }
         }
 
-        public List<Contratacion> ListarContrataciones()
+        public List<Contratacion> LeerContrataciones()
         {
             List<Contratacion> contrataciones = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -202,7 +202,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 }
             }
         }
-        public List<Preparacion> ListarPreparaciones()
+        public List<Preparacion> LeerPreparaciones()
         {
             List<Preparacion> preparaciones = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);
@@ -251,7 +251,7 @@ namespace AlquilerAudiovisual.Persistencia.DalDataBase
                 }
             }
         }
-        public List<Tarifa> ListarTarifas()
+        public List<Tarifa> LeerTarifas()
         {
             List<Tarifa> tarifas = [];
             SqlConnection connection = new SqlConnection(Constantes.CONNECTION_BD);

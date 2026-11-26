@@ -7,12 +7,12 @@ namespace AlquilerAudiovisual.Persistencia.Interfaces
     {
         int AgregarContratacion(Contratacion contratacion);
         bool ActualizarContratacion(Contratacion contratacion);
-        List<Contratacion> ListarContrataciones();
+        List<Contratacion> LeerContrataciones();
         Contratacion? ObtenerContratacionPorId(int idContratacion);
         int AgregarPreparacion(Preparacion preparacion);
         bool ActualizarPreparacion(Preparacion preparacion);
-        List<Preparacion> ListarPreparaciones();
+        List<Preparacion> LeerPreparaciones();
         int AgregarTarifa(Tarifa tarifa);
-        List<Tarifa> ListarTarifas();
+        List<Tarifa> LeerTarifas();
     }
 }

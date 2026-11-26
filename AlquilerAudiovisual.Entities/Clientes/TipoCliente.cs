@@ -4,5 +4,6 @@
     {
         public int IdTipoCliente { get; set; }
         public required string Nombre { get; set; }
+        public override string ToString() => Nombre;
     }
 }

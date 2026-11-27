@@ -34,14 +34,20 @@
             lblDocumento = new Label();
             txtTelefono = new TextBox();
             lblTelefono = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
+            txtCorreo = new TextBox();
+            lblCorreo = new Label();
+            txtDireccion = new TextBox();
+            lblDireccion = new Label();
+            btnGuardar = new Button();
+            btnCancelar = new Button();
+            cbTipoCliente = new ComboBox();
+            lblTipoCliente = new Label();
             SuspendLayout();
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(175, 35);
+            lblNombre.Location = new Point(190, 24);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(54, 15);
             lblNombre.TabIndex = 0;
@@ -49,14 +55,14 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(191, 53);
+            txtNombre.Location = new Point(190, 42);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(410, 23);
             txtNombre.TabIndex = 1;
             // 
             // txtDocumento
             // 
-            txtDocumento.Location = new Point(191, 113);
+            txtDocumento.Location = new Point(190, 102);
             txtDocumento.Name = "txtDocumento";
             txtDocumento.Size = new Size(410, 23);
             txtDocumento.TabIndex = 3;
@@ -64,7 +70,7 @@
             // lblDocumento
             // 
             lblDocumento.AutoSize = true;
-            lblDocumento.Location = new Point(175, 95);
+            lblDocumento.Location = new Point(190, 84);
             lblDocumento.Name = "lblDocumento";
             lblDocumento.Size = new Size(73, 15);
             lblDocumento.TabIndex = 2;
@@ -72,7 +78,7 @@
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(191, 172);
+            txtTelefono.Location = new Point(190, 166);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(410, 23);
             txtTelefono.TabIndex = 5;
@@ -80,27 +86,81 @@
             // lblTelefono
             // 
             lblTelefono.AutoSize = true;
-            lblTelefono.Location = new Point(175, 154);
+            lblTelefono.Location = new Point(188, 148);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(56, 15);
             lblTelefono.TabIndex = 4;
             lblTelefono.Text = "Telefono:";
             // 
-            // textBox1
+            // txtCorreo
             // 
-            textBox1.Location = new Point(191, 230);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(410, 23);
-            textBox1.TabIndex = 7;
+            txtCorreo.Location = new Point(190, 224);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(410, 23);
+            txtCorreo.TabIndex = 7;
             // 
-            // label1
+            // lblCorreo
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(175, 212);
-            label1.Name = "label1";
-            label1.Size = new Size(46, 15);
-            label1.TabIndex = 6;
-            label1.Text = "Correo:";
+            lblCorreo.AutoSize = true;
+            lblCorreo.Location = new Point(188, 206);
+            lblCorreo.Name = "lblCorreo";
+            lblCorreo.Size = new Size(46, 15);
+            lblCorreo.TabIndex = 6;
+            lblCorreo.Text = "Correo:";
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.Location = new Point(190, 289);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(410, 23);
+            txtDireccion.TabIndex = 9;
+            // 
+            // lblDireccion
+            // 
+            lblDireccion.AutoSize = true;
+            lblDireccion.Location = new Point(188, 271);
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new Size(60, 15);
+            lblDireccion.TabIndex = 8;
+            lblDireccion.Text = "Direccion:";
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(596, 398);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(117, 23);
+            btnGuardar.TabIndex = 10;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(460, 398);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(117, 23);
+            btnCancelar.TabIndex = 11;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // cbTipoCliente
+            // 
+            cbTipoCliente.FormattingEnabled = true;
+            cbTipoCliente.Location = new Point(190, 347);
+            cbTipoCliente.Name = "cbTipoCliente";
+            cbTipoCliente.Size = new Size(121, 23);
+            cbTipoCliente.TabIndex = 12;
+            cbTipoCliente.SelectedIndexChanged += cbTipoCliente_SelectedIndexChanged;
+            // 
+            // lblTipoCliente
+            // 
+            lblTipoCliente.AutoSize = true;
+            lblTipoCliente.Location = new Point(188, 327);
+            lblTipoCliente.Name = "lblTipoCliente";
+            lblTipoCliente.Size = new Size(90, 15);
+            lblTipoCliente.TabIndex = 13;
+            lblTipoCliente.Text = "Tipo de Cliente:";
             // 
             // FrmRegistroClientes
             // 
@@ -108,8 +168,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            Controls.Add(lblTipoCliente);
+            Controls.Add(cbTipoCliente);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnGuardar);
+            Controls.Add(txtDireccion);
+            Controls.Add(lblDireccion);
+            Controls.Add(txtCorreo);
+            Controls.Add(lblCorreo);
             Controls.Add(txtTelefono);
             Controls.Add(lblTelefono);
             Controls.Add(txtDocumento);
@@ -130,7 +196,13 @@
         private Label lblDocumento;
         private TextBox txtTelefono;
         private Label lblTelefono;
-        private TextBox textBox1;
-        private Label label1;
+        private TextBox txtCorreo;
+        private Label lblCorreo;
+        private TextBox txtDireccion;
+        private Label lblDireccion;
+        private Button btnGuardar;
+        private Button btnCancelar;
+        private ComboBox cbTipoCliente;
+        private Label lblTipoCliente;
     }
 }

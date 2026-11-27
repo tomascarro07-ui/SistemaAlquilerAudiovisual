@@ -40,6 +40,8 @@
             btnDesactivarUsuario = new Button();
             btnActivarUsuario = new Button();
             btnEditarDatos = new Button();
+            btnAgregarUsuario = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             SuspendLayout();
             // 
@@ -143,12 +145,35 @@
             btnEditarDatos.UseVisualStyleBackColor = true;
             btnEditarDatos.Click += btnEditarDatos_Click;
             // 
+            // btnAgregarUsuario
+            // 
+            btnAgregarUsuario.Location = new Point(157, 395);
+            btnAgregarUsuario.Name = "btnAgregarUsuario";
+            btnAgregarUsuario.Size = new Size(101, 23);
+            btnAgregarUsuario.TabIndex = 5;
+            btnAgregarUsuario.Text = "Agregar usuario";
+            btnAgregarUsuario.UseVisualStyleBackColor = true;
+            btnAgregarUsuario.Click += btnAgregarUsuario_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.MenuBar;
+            button1.Location = new Point(12, 451);
+            button1.Name = "button1";
+            button1.Size = new Size(92, 28);
+            button1.TabIndex = 6;
+            button1.Text = "&Volver";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // FrmListadoClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 491);
+            Controls.Add(button1);
+            Controls.Add(btnAgregarUsuario);
             Controls.Add(btnEditarDatos);
             Controls.Add(btnActivarUsuario);
             Controls.Add(btnDesactivarUsuario);
@@ -173,5 +198,7 @@
         private DataGridViewTextBoxColumn ColTipoCliente;
         private Button btnActivarUsuario;
         private Button btnEditarDatos;
+        private Button btnAgregarUsuario;
+        private Button button1;
     }
 }

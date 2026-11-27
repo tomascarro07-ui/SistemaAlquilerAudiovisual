@@ -13,7 +13,7 @@ namespace AlquilerAudiovisual.Desktop
     {
         private Form? formActual;
 
-        private void AbrirEnPanel(Form formulario)
+        public void AbrirEnPanel(Form formulario)
         {
             formActual?.Close();          // cierra el que estaba abierto
             formActual = formulario;
@@ -23,6 +23,11 @@ namespace AlquilerAudiovisual.Desktop
             pnlContenido.Controls.Add(formulario);
             formulario.BringToFront();
             formulario.Show();
+        }
+        public void MostrarInicio()
+        {
+            formActual?.Close();
+            formActual = null;
         }
         public FrmPrincipal()
         {

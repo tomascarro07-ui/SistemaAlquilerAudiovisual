@@ -78,7 +78,7 @@ namespace AlquilerAudiovisual.Desktop.Clientes
         {
             if (!IsSelectedRowValid())
             {
-                MessageBox.Show("Por favor seleccione un usuario para desactivar.");
+                MessageBox.Show("Por favor seleccione un usuario para editar.");
                 return;
             }
             if (dgvClientes.SelectedRows[0].DataBoundItem is not Cliente cliente)
@@ -86,10 +86,25 @@ namespace AlquilerAudiovisual.Desktop.Clientes
                 return;
             }
 
-            FrmActualizarClientes frm = new FrmActualizarClientes(cliente);
-            if(frm.ShowDialog() == DialogResult.OK)
+            if (ParentForm is FrmPrincipal principal)
             {
-                CargarClientes();
+                principal.AbrirEnPanel(new FrmActualizarClientes(cliente));
+            }
+        }
+
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            if (ParentForm is FrmPrincipal principal)
+            {
+                principal.AbrirEnPanel(new FrmRegistroClientes());
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (ParentForm is FrmPrincipal principal)
+            {
+                principal.MostrarInicio();
             }
         }
     }

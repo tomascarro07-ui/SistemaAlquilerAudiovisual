@@ -92,3 +92,4 @@ C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-w
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.Solicitudes.FrmListadoSolicitudes.resources
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.Solicitudes.FrmRegistroSolicitudes.resources
 C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.Clientes.FrmActualizarClientes.resources
+C:\Proyectos\AlquilerAudioVisual\AlquilerAudiovisual.Desktop\obj\Debug\net10.0-windows\AlquilerAudiovisual.Desktop.Properties.Resources.resources

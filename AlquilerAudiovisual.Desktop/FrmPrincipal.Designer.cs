@@ -64,7 +64,7 @@
             pnlContenido.Dock = DockStyle.Fill;
             pnlContenido.Location = new Point(0, 24);
             pnlContenido.Name = "pnlContenido";
-            pnlContenido.Size = new Size(800, 426);
+            pnlContenido.Size = new Size(800, 489);
             pnlContenido.TabIndex = 0;
             // 
             // menuStrip1
@@ -223,7 +223,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 513);
             Controls.Add(pnlContenido);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;

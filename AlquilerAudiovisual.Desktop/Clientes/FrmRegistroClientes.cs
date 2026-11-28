@@ -1,12 +1,5 @@
 ﻿using AlquilerAudiovisual.Dominio;
 using AlquilerAudiovisual.Entities.Clientes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 
 namespace AlquilerAudiovisual.Desktop.Clientes
 {
@@ -50,7 +43,8 @@ namespace AlquilerAudiovisual.Desktop.Clientes
                 gestor.AgregarCliente(cliente);
                 if (ParentForm is FrmPrincipal principal)
                 {
-                    principal.AbrirEnPanel(new FrmRegistroClientes());
+                    MessageBox.Show("Usuario registrado correctamente.");
+                    principal.AbrirEnPanel(new FrmListadoClientes());
                 }
             }
             catch(Exception ex)

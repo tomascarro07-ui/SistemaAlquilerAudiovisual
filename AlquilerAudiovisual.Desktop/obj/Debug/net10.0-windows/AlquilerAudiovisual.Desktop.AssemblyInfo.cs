@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlquilerAudiovisual.Desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6776c9608db147ea2d9c834d371401bd93570ab8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce07a70d9b5137fd0a56871e4c9eb0f83afae61d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlquilerAudiovisual.Desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlquilerAudiovisual.Desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

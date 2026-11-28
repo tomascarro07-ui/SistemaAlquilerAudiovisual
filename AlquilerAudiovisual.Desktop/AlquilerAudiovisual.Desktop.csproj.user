@@ -43,6 +43,9 @@
     <Compile Update="Reportes\FrmConsultaReportes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Solicitudes\FrmActualizarSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Solicitudes\FrmListadoSolicitudes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,11 +1,5 @@
 ﻿using AlquilerAudiovisual.Desktop.Clientes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+using AlquilerAudiovisual.Desktop.Solicitudes;
 
 namespace AlquilerAudiovisual.Desktop
 {
@@ -37,6 +31,21 @@ namespace AlquilerAudiovisual.Desktop
         private void listadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirEnPanel(new FrmListadoClientes());
+        }
+
+        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanel(new FrmRegistroClientes());
+        }
+
+        private void listadoDeSolicitudesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanel(new FrmListadoSolicitudes());
+        }
+
+        private void registrarSolicitudToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirEnPanel(new FrmRegistroSolicitudes());
         }
     }
 }

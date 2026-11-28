@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvClientes = new DataGridView();
+            dvgClientes = new DataGridView();
             ColIdCliente = new DataGridViewTextBoxColumn();
             ColDocumento = new DataGridViewTextBoxColumn();
             ColNombre = new DataGridViewTextBoxColumn();
@@ -41,23 +41,23 @@
             btnActivarUsuario = new Button();
             btnEditarDatos = new Button();
             btnAgregarUsuario = new Button();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
+            btnVolver = new Button();
+            ((System.ComponentModel.ISupportInitialize)dvgClientes).BeginInit();
             SuspendLayout();
             // 
-            // dgvClientes
+            // dvgClientes
             // 
-            dgvClientes.AllowUserToAddRows = false;
-            dgvClientes.BackgroundColor = SystemColors.Window;
-            dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Columns.AddRange(new DataGridViewColumn[] { ColIdCliente, ColDocumento, ColNombre, ColTelefono, ColCorreo, ColDireccion, ColActivo, ColTipoCliente });
-            dgvClientes.Location = new Point(12, 12);
-            dgvClientes.MultiSelect = false;
-            dgvClientes.Name = "dgvClientes";
-            dgvClientes.ReadOnly = true;
-            dgvClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvClientes.Size = new Size(776, 377);
-            dgvClientes.TabIndex = 0;
+            dvgClientes.AllowUserToAddRows = false;
+            dvgClientes.BackgroundColor = SystemColors.Window;
+            dvgClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dvgClientes.Columns.AddRange(new DataGridViewColumn[] { ColIdCliente, ColDocumento, ColNombre, ColTelefono, ColCorreo, ColDireccion, ColActivo, ColTipoCliente });
+            dvgClientes.Location = new Point(12, 12);
+            dvgClientes.MultiSelect = false;
+            dvgClientes.Name = "dvgClientes";
+            dvgClientes.ReadOnly = true;
+            dvgClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dvgClientes.Size = new Size(776, 377);
+            dvgClientes.TabIndex = 0;
             // 
             // ColIdCliente
             // 
@@ -151,20 +151,20 @@
             btnAgregarUsuario.Name = "btnAgregarUsuario";
             btnAgregarUsuario.Size = new Size(101, 23);
             btnAgregarUsuario.TabIndex = 5;
-            btnAgregarUsuario.Text = "Agregar usuario";
+            btnAgregarUsuario.Text = "&Agregar usuario";
             btnAgregarUsuario.UseVisualStyleBackColor = true;
             btnAgregarUsuario.Click += btnAgregarUsuario_Click;
             // 
-            // button1
+            // btnVolver
             // 
-            button1.BackColor = SystemColors.MenuBar;
-            button1.Location = new Point(12, 451);
-            button1.Name = "button1";
-            button1.Size = new Size(92, 28);
-            button1.TabIndex = 6;
-            button1.Text = "&Volver";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnVolver.BackColor = SystemColors.MenuBar;
+            btnVolver.Location = new Point(12, 451);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(92, 28);
+            btnVolver.TabIndex = 6;
+            btnVolver.Text = "&Volver";
+            btnVolver.UseVisualStyleBackColor = false;
+            btnVolver.Click += button1_Click;
             // 
             // FrmListadoClientes
             // 
@@ -172,15 +172,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 491);
-            Controls.Add(button1);
+            Controls.Add(btnVolver);
             Controls.Add(btnAgregarUsuario);
             Controls.Add(btnEditarDatos);
             Controls.Add(btnActivarUsuario);
             Controls.Add(btnDesactivarUsuario);
-            Controls.Add(dgvClientes);
+            Controls.Add(dvgClientes);
             Name = "FrmListadoClientes";
             Text = "FrmListadoClientes";
-            ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dvgClientes).EndInit();
             ResumeLayout(false);
         }
 
@@ -199,6 +199,8 @@
         private Button btnActivarUsuario;
         private Button btnEditarDatos;
         private Button btnAgregarUsuario;
-        private Button button1;
+        private Button btnVolver;
+        private DataGridView dgvSolicitudes;
+        private DataGridView dvgClientes;
     }
 }

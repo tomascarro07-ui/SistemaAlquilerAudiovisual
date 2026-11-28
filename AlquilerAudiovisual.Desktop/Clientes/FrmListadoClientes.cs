@@ -37,6 +37,7 @@ namespace AlquilerAudiovisual.Desktop.Clientes
                     return;
                 }
                 CargarClientes();
+                MessageBox.Show("Usuario desactivado correctamente.");
             }
             catch (Exception ex)
             {
@@ -62,6 +63,7 @@ namespace AlquilerAudiovisual.Desktop.Clientes
                 cliente.Activo = true;
                 gestorClientes.ActualizarCliente(cliente);
                 CargarClientes();
+                MessageBox.Show("Usuario activado correctamente.");
             }
             catch (Exception ex)
             {

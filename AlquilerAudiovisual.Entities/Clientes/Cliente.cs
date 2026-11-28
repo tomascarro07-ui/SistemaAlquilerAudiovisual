@@ -8,6 +8,7 @@ namespace AlquilerAudiovisual.Entities.Clientes
         public int IdCliente { set; get; }
         public string Documento { get; set; }
         public string Nombre { get; set; }
+        public override string ToString() => Nombre;
         public string Telefono { get; set; }
         public string? Correo { get; set; }
         public string Direccion { get; set; }

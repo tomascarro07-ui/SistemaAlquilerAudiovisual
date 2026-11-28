@@ -28,12 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmActualizarClientes";
+            btnCancelar = new Button();
+            btnGuardar = new Button();
+            txtDireccion = new TextBox();
+            lblDireccion = new Label();
+            txtCorreo = new TextBox();
+            lblCorreo = new Label();
+            txtTelefono = new TextBox();
+            lblTelefono = new Label();
+            txtNombre = new TextBox();
+            lblNombre = new Label();
+            cbTipoCliente = new ComboBox();
+            lblTipoCliente = new Label();
+            SuspendLayout();
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(459, 398);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(117, 23);
+            btnCancelar.TabIndex = 25;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(595, 398);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(117, 23);
+            btnGuardar.TabIndex = 24;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.Location = new Point(191, 257);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(410, 23);
+            txtDireccion.TabIndex = 23;
+            // 
+            // lblDireccion
+            // 
+            lblDireccion.AutoSize = true;
+            lblDireccion.Location = new Point(189, 239);
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new Size(60, 15);
+            lblDireccion.TabIndex = 22;
+            lblDireccion.Text = "Direccion:";
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Location = new Point(191, 192);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(410, 23);
+            txtCorreo.TabIndex = 21;
+            // 
+            // lblCorreo
+            // 
+            lblCorreo.AutoSize = true;
+            lblCorreo.Location = new Point(189, 174);
+            lblCorreo.Name = "lblCorreo";
+            lblCorreo.Size = new Size(46, 15);
+            lblCorreo.TabIndex = 20;
+            lblCorreo.Text = "Correo:";
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.Location = new Point(191, 134);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(410, 23);
+            txtTelefono.TabIndex = 19;
+            // 
+            // lblTelefono
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.Location = new Point(189, 116);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(56, 15);
+            lblTelefono.TabIndex = 18;
+            lblTelefono.Text = "Telefono:";
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(191, 79);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(410, 23);
+            txtNombre.TabIndex = 15;
+            // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(191, 61);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(54, 15);
+            lblNombre.TabIndex = 14;
+            lblNombre.Text = "Nombre:";
+            // 
+            // cbTipoCliente
+            // 
+            cbTipoCliente.FormattingEnabled = true;
+            cbTipoCliente.Location = new Point(191, 318);
+            cbTipoCliente.Name = "cbTipoCliente";
+            cbTipoCliente.Size = new Size(121, 23);
+            cbTipoCliente.TabIndex = 26;
+            // 
+            // lblTipoCliente
+            // 
+            lblTipoCliente.AutoSize = true;
+            lblTipoCliente.Location = new Point(191, 300);
+            lblTipoCliente.Name = "lblTipoCliente";
+            lblTipoCliente.Size = new Size(90, 15);
+            lblTipoCliente.TabIndex = 27;
+            lblTipoCliente.Text = "Tipo de Cliente:";
+            // 
+            // FrmActualizarClientes
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(800, 450);
+            Controls.Add(lblTipoCliente);
+            Controls.Add(cbTipoCliente);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnGuardar);
+            Controls.Add(txtDireccion);
+            Controls.Add(lblDireccion);
+            Controls.Add(txtCorreo);
+            Controls.Add(lblCorreo);
+            Controls.Add(txtTelefono);
+            Controls.Add(lblTelefono);
+            Controls.Add(txtNombre);
+            Controls.Add(lblNombre);
+            Name = "FrmActualizarClientes";
+            Text = "FrmActualizarClientes";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+        private Button btnCancelar;
+        private Button btnGuardar;
+        private TextBox txtDireccion;
+        private Label lblDireccion;
+        private TextBox txtCorreo;
+        private Label lblCorreo;
+        private TextBox txtTelefono;
+        private Label lblTelefono;
+        private TextBox txtNombre;
+        private Label lblNombre;
+        private ComboBox cbTipoCliente;
+        private Label lblTipoCliente;
     }
 }

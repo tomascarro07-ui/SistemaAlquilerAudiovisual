@@ -95,6 +95,7 @@
             registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
             registrarClienteToolStripMenuItem.Size = new Size(171, 22);
             registrarClienteToolStripMenuItem.Text = "&Registrar cliente";
+            registrarClienteToolStripMenuItem.Click += registrarClienteToolStripMenuItem_Click;
             // 
             // solicitudesToolStripMenuItem
             // 
@@ -108,12 +109,14 @@
             listadoDeSolicitudesToolStripMenuItem.Name = "listadoDeSolicitudesToolStripMenuItem";
             listadoDeSolicitudesToolStripMenuItem.Size = new Size(187, 22);
             listadoDeSolicitudesToolStripMenuItem.Text = "&Listado de solicitudes";
+            listadoDeSolicitudesToolStripMenuItem.Click += listadoDeSolicitudesToolStripMenuItem_Click;
             // 
             // registrarSolicitudToolStripMenuItem
             // 
             registrarSolicitudToolStripMenuItem.Name = "registrarSolicitudToolStripMenuItem";
             registrarSolicitudToolStripMenuItem.Size = new Size(187, 22);
             registrarSolicitudToolStripMenuItem.Text = "&Registrar solicitud";
+            registrarSolicitudToolStripMenuItem.Click += registrarSolicitudToolStripMenuItem_Click;
             // 
             // contratacionesToolStripMenuItem
             // 

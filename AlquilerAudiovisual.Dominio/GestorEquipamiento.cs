@@ -10,8 +10,22 @@ namespace AlquilerAudiovisual.Dominio
 
         public int AgregarEquipoIdentificable(EquipoIdentificable equipo)
         {
+            equipo.CodigoInterno = GenerarCodigoInterno();
             ValidarEquipoIdentificable(equipo);
             return dalEquipamiento.AgregarEquipoIdentificable(equipo);
+        }
+
+        private string GenerarCodigoInterno()
+        {
+            int ultimo = dalEquipamiento.LeerEquipos()
+                .OfType<EquipoIdentificable>()
+                .Select(e => e.CodigoInterno)
+                .Where(c => c != null && c.StartsWith("EQ-") && int.TryParse(c.Substring(3), out _))
+                .Select(c => int.Parse(c.Substring(3)))
+                .DefaultIfEmpty(0)
+                .Max();
+
+            return $"EQ-{ultimo + 1:D5}";
         }
 
         public bool ActualizarEquipoIdentificable(EquipoIdentificable equipo)

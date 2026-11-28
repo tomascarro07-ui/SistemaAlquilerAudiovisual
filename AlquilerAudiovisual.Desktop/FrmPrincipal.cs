@@ -1,4 +1,5 @@
 ﻿using AlquilerAudiovisual.Desktop.Clientes;
+using AlquilerAudiovisual.Desktop.Equipamiento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,12 +75,13 @@ namespace AlquilerAudiovisual.Desktop
         #region Equipamiento
         private void TSMI_EquiposList_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void TSMI_RegistroEquipo_Click(object sender, EventArgs e)
         {
-
+            FrmRegistroEquipos frmRegistroEquipos = new FrmRegistroEquipos();
+            frmRegistroEquipos.Show();
         }
 
         private void TSMI_Deposito_Click(object sender, EventArgs e)
